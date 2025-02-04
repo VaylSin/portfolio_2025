@@ -10,7 +10,6 @@ const Header = () => {
                 <Link href="/">
                     <h1 className='text-4xl font-semibold'>
                         {"${K"}<span className="text-accent">{"Digit}"}</span>
-
                     </h1>
                 </Link>
                 {/* desktop nav */}
