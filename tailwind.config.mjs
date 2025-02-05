@@ -19,12 +19,12 @@ export default {
 				xl: "80rem",
 			},
 			fontFamily: {
-				primary: "var(--font-jetbrainsMono)",
+				primary: "var(--font-openSans)",
 			},
 			colors: {
-				primary: '#1c1c22',
+				primary: '#253137',
 				accent: {
-					DEFAULT: '#00ff99',
+					DEFAULT: '#ff6f61',
 					hover: '#00e187',
 				},
 			},

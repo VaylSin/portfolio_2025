@@ -1,4 +1,4 @@
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
@@ -11,7 +11,11 @@ const JetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrainsMono",
 });
 
-
+const OpenSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ['300','400','500','600','700','800'],
+  variable: "--font-openSans",
+});
 export const metadata = {
   title: "SKDigit",
   description: "Texte de description à rajouter",
