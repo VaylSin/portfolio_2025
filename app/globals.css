@@ -16,6 +16,12 @@
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.5] font-semibold;
   }
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #ff6f61;
+  }
 }
 
 @layer base {
