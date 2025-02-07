@@ -6,28 +6,28 @@ import { BsArrowDownRight } from "react-icons/bs";
 const services = [
 	{
 		num: "01",
-		title: "Web Development",
+		title: "Sites Wordpress / WooCommerce ",
 		description:
 			"We provide web development services for your business. We can help you to build a website from scratch or improve your existing website.",
 		link: "/services/web-development",
 	},
 	{
 		num: "02",
-		title: "UI/UX Design",
+		title: "Web Applications",
 		description:
 			"We provide web development services for your business. We can help you to build a website from scratch or improve your existing website.",
 		link: "/services/web-development",
 	},
 	{
 		num: "03",
-		title: "Logo Design",
+		title: "Landing Pages",
 		description:
 			"We provide web development services for your business. We can help you to build a website from scratch or improve your existing website.",
 		link: "/services/web-development",
 	},
 	{
 		num: "04",
-		title: "SEO Optimization",
+		title: "Optimisations Référencement ",
 		description:
 			"We provide web development services for your business. We can help you to build a website from scratch or improve your existing website.",
 		link: "/services/web-development",
