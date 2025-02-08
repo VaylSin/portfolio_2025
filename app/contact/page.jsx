@@ -50,7 +50,7 @@ const Contact = () => {
 						<form
 							action=""
 							method="POST"
-							data-netlify="true"
+							// data-netlify="true"
 							className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
 						>
 							<h3 className="text-4xl text-accent">Travaillons ensemble</h3>
@@ -63,23 +63,26 @@ const Contact = () => {
 									type="text"
 									placeholder="Nom + Prénom"
 									label="nom_complet"
+									name="nom_complet"
 									required
 								/>
 								<Input
 									type="text"
 									placeholder="Téléphone"
 									label="Phone"
+									name="phone"
 									required
 								/>
 								<Input
 									type="email"
 									placeholder="Email"
 									label="email"
+									name="email"
 									required
 								/>
-								<input type="hidden" name="form-name" value="contact" />
+								{/* <input type="hidden" name="form-name" value="contact" /> */}
 							</div>
-							<Select>
+							<Select name="sujet_demande">
 								<SelectTrigger className="w-full">
 									<SelectValue placeholder="Sujet de votre demande" />
 								</SelectTrigger>
@@ -102,6 +105,7 @@ const Contact = () => {
 								className="h-[200px]"
 								placeholder="Message"
 								label="Message"
+								name="Message"
 								required
 							/>
 							<Button type="submit" size="md" className="max-w-40">
