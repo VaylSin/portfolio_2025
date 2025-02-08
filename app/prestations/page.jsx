@@ -8,28 +8,28 @@ const services = [
 		num: "01",
 		title: "Sites Wordpress / WooCommerce ",
 		description:
-			"We provide web development services for your business. We can help you to build a website from scratch or improve your existing website.",
+			"Nous proposons des services de développement WordPress et WooCommerce pour votre entreprise. Que ce soit pour créer un site web sur mesure ou optimiser votre boutique en ligne existante, nous vous accompagnons à chaque étape. ",
 		link: "/services/web-development",
 	},
 	{
 		num: "02",
-		title: "Web Applications",
+		title: "Applications Web",
 		description:
-			"We provide web development services for your business. We can help you to build a website from scratch or improve your existing website.",
+			"Nous concevons des applications web modernes et performantes avec React et Symfony. Que vous ayez besoin d’une solution sur mesure ou d’une optimisation de votre application existante, nous vous aidons à allier efficacité, scalabilité et expérience utilisateur fluide.",
 		link: "/services/web-development",
 	},
 	{
 		num: "03",
 		title: "Landing Pages",
 		description:
-			"We provide web development services for your business. We can help you to build a website from scratch or improve your existing website.",
+			"Nous créons des landing pages optimisées pour convertir vos visiteurs en clients. Que ce soit pour un lancement de produit, une campagne marketing ou un événement, nous concevons des pages sur mesure, performantes et engageantes.",
 		link: "/services/web-development",
 	},
 	{
 		num: "04",
 		title: "Optimisations Référencement ",
 		description:
-			"We provide web development services for your business. We can help you to build a website from scratch or improve your existing website.",
+			"Nous optimisons votre site pour un meilleur référencement naturel (SEO). De l’audit technique à l’amélioration du contenu et des performances, nous mettons en place des stratégies efficaces pour booster votre visibilité et attirer plus de visiteurs qualifiés. ",
 		link: "/services/web-development",
 	},
 ];
@@ -62,15 +62,15 @@ const Services = () => {
 									</div>
 									<Link
 										href={service.link}
-										className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent  transition-all duration-500 flex justify-center items-center hover:rotate-45"
+										className="w-[50px] h-[50px] rounded-full bg-white group-hover:bg-accent  transition-all duration-500 flex justify-center items-center hover:rotate-45"
 									>
-										<BsArrowDownRight className="text-primary text-3xl" />
+										<BsArrowDownRight className="text-primary text-2xl" />
 									</Link>
 								</div>
-								<h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+								<h2 className="text-[36px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
 									{service.title}
 								</h2>
-								<p className="text-white/60">{service.description}</p>
+								<p className="text-white/60 text-base">{service.description}</p>
 								<div className="border-b border-white/20 w-full"></div>
 							</div>
 						);

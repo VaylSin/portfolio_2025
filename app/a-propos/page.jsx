@@ -23,7 +23,7 @@ import { Item } from "@radix-ui/react-select";
 const skills = {
 	title: "Compétences",
 	description:
-		"I have experience working with a variety of technologies and tools. Here are some of the skills that I have developed over the years.",
+		"J'ai développé des compétences avec un large éventail de technologies et d'outils. Voici un aperçu des principales compétences que j'ai acquises au fil de mon expérience.",
 	items: [
 		{ name: "HTML5", icon: <FaHtml5 /> },
 		{ name: "CSS3", icon: <FaCss3 /> },
@@ -37,9 +37,31 @@ const skills = {
 };
 
 const about = {
-	title: "Full Stack Developer",
-	description:
-		"I am a full stack developer with 5 years of experience in web development. I am proficient in HTML, CSS, JavaScript, React, Symfony, and Wordpress. I am passionate about building web applications that are user-friendly and accessible. I am a team player and enjoy working with others to achieve common goals.",
+	title: "Développeur full-stack",
+	description: (
+		<>
+			Suite à une reconversion professionnelle en 2015, j’ai eu l’opportunité
+			d’acquérir plus de 7 ans d’expérience en agence, où j’ai pu développer des
+			compétences solides en création de sites vitrines et en développement
+			d’applications web.
+			<br />
+			<br />
+			Ce qui me passionne, c’est de répondre aux besoins uniques de chaque
+			client, en concevant des solutions sur-mesure, performantes et
+			accessibles.
+			<br />
+			{/* <br /> */}
+			Mon travail me permet de marier technologie et créativité, et j'aime
+			autant m'attaquer à des projets de petite envergure qu'à des défis plus
+			complexes.
+			<br />
+			<br />
+			En dehors de mon métier, je nourris ma curiosité et mon énergie à travers
+			mes passions : la batterie, le sport et la cuisine, qui me permettent de
+			me ressourcer et de garder un équilibre entre vie professionnelle et
+			personnelle.
+		</>
+	),
 	info: [
 		{ label: "Name", value: "Sylvain Butet" },
 		{ label: "Email", value: "sylvain@skdigit.fr" },
@@ -54,7 +76,7 @@ const experiences = {
 	icon: "assets/resume/badge.svg",
 	title: "Mes experiences",
 	description:
-		"I have worked on a variety of projects, ranging from small websites to large web applications. I have experience working with clients from different industries, including e-commerce, education, and healthcare. I am comfortable working in a fast-paced environment and can adapt to changing requirements quickly.",
+		"J'ai travaillé sur une variété de projets, allant de petits sites web à de grandes applications web. J'ai acquis de l'expérience en collaborant avec des clients de secteurs divers, tels que l'e-commerce, l'éducation et la santé. Je suis à l'aise dans des environnements dynamiques et je sais m'adapter rapidement aux exigences changeantes.",
 	items: [
 		{
 			company: "SKDigit",
@@ -170,9 +192,9 @@ const Resume = () => {
 						<TabsContent value="formations" className="w-full">
 							<div className="flex flex-col gap-[30px] text-center xl:text-left">
 								<h3 className="text-4xl font-bold">{education.title}</h3>
-								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+								{/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
 									{education.description}
-								</p>
+								</p> */}
 								<ScrollArea className="h-[400px]">
 									<ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
 										{education.items.map((item, index) => {
@@ -232,7 +254,7 @@ const Resume = () => {
 						>
 							<div className="flex flex-col gap-[30px]">
 								<h3 className="text-4xl font-bold">{about.title}</h3>
-								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+								<p className="max-w-[800px] text-white/60 mx-auto xl:mx-0">
 									{about.description}
 								</p>
 								<ul className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">

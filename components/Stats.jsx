@@ -16,8 +16,12 @@ const statsPerso = [
 		title: "Années d'expérience",
 	},
 	{
-		number: 6,
+		number: 8,
 		title: "Technologies maitrisées",
+	},
+	{
+		number: 500,
+		title: "Commits Github",
 	},
 ];
 

@@ -30,37 +30,37 @@ import {
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
+	// {
+	// 	num: "01",
+	// 	category: "Développement NextJS",
+	// 	Logo: CodeIcon,
+	// 	title: "SkDigit",
+	// 	description: "Fondateur de SKDigit, agence de développement web",
+	// 	url: "https://skdigit.com",
+	// 	stack: ["NextJS", "TailwindCSS", "Firebase", "Framer Motion"],
+	// },
 	{
 		num: "01",
-		category: "Développement NextJS",
-		Logo: CodeIcon,
-		title: "SkDigit",
-		description: "Fondateur de SKDigit, agence de développement web",
-		url: "https://skdigit.com",
-		stack: ["NextJS", "TailwindCSS", "Firebase", "Framer Motion"],
-	},
-	{
-		num: "02",
 		category: "Développement Wordpress",
-		Logo: CameraIcon,
+		thumb: "/assets/img/gulwen.png",
 		title: "Gülwen",
 		description: "Blog d'une influenceuse en Ardèche",
 		url: "https://gulwen.fr",
 		stack: ["Wordpress", "ACF", "Timber Components", "Aos"],
 	},
 	{
-		num: "03",
+		num: "02",
 		category: "Développement Wordpress / WebDesign",
-		Logo: Music,
+		thumb: "/assets/img/jonesy.png",
 		title: "Jonesy Agency",
 		description: "Studio d'enregistrement basé à Paris 11",
 		url: "https://jonesyagency.com",
 		stack: ["Wordpress", "ACF flexible", "Sass", "Aos"],
 	},
 	{
-		num: "04",
+		num: "03",
 		category: "Developpement ReactJS",
-		Logo: DollarSign,
+		thumb: "/assets/img/crypto.png",
 		title: "Crypto App",
 		description:
 			"Une petite application listant et détaillant les principales Cryptos du marché",
@@ -68,54 +68,54 @@ const projects = [
 		stack: ["ReactJS", "TailwindCSS", "CoinGecko API"],
 	},
 	{
-		num: "05",
+		num: "04",
 		category: "Développement ReactJS",
-		Logo: BrainIcon,
+		thumb: "/assets/img/quiz.png",
 		title: "CultureQuiz",
 		description: "Un petit quizz de culture générale",
 		url: "https://culturequiz.skdigit.com",
 		stack: ["ReactJS", "Css3"],
 	},
 	{
-		num: "06",
+		num: "05",
 		category: "Développement ReactJS",
-		Logo: YoutubeIcon,
+		thumb: "/assets/img/youtube.png",
 		title: "Youtube Clone",
 		description: "Un clone de Youtube en ReactJS",
 		url: "https://youtube.skdigit.com",
 		stack: ["ReactJS", "TailwindCSS", "Youtube API"],
 	},
 	{
-		num: "07",
+		num: "06",
 		category: "Développement Front-End",
-		Logo: Computer,
+		thumb: "/assets/img/landing.png",
 		title: "Landing Page",
 		description: "Un exemple de Landing Page",
 		url: "https://landing.skdigit.com",
 		stack: ["Html5", "TailwindCSs", "Aos"],
 	},
 	{
-		num: "08",
+		num: "07",
 		category: "Développement Wordpress / WebDesign",
-		Logo: Beer,
+		thumb: "/assets/img/kosho.png",
 		title: "KoshoBrewers",
 		description: "Une micro-brasserie sur fond de thématique Coréenne",
 		url: "https://www.koshobrewers.com",
 		stack: ["Wordpress", "ACF", "Sass"],
 	},
 	{
-		num: "01",
+		num: "08",
 		category: "Développement Wordpress / WebDesign",
-		Logo: Waves,
+		thumb: "/assets/img/lovecraft.png",
 		title: "LeLovecraft",
 		description: "Bar / Restaurant / Salle de concert basé à Nantes",
 		url: "https://www.lelovecraft.com",
 		stack: ["Wordpress", "Sass", "ACF", "Aos"],
 	},
 	{
-		num: "10",
+		num: "09",
 		category: "Blog Wordpress",
-		Logo: Component,
+		thumb: "/assets/img/johanna.png",
 		title: "Johanna De Rangot",
 		description:
 			"Site d'une styliste / couturière talentueuse basée à St-Brieuc",
@@ -163,7 +163,7 @@ const Work = () => {
 							</ul>
 							<div className="border border-white/20"></div>
 							<div className="flex gap-4 items-center">
-								<Link href={project.url}>
+								<Link href={project.url} target="_blank">
 									<TooltipProvider delayDuration={100}>
 										<Tooltip>
 											<TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex items-center justify-center group">
@@ -175,7 +175,7 @@ const Work = () => {
 										</Tooltip>
 									</TooltipProvider>
 								</Link>
-								<Link href={project.url}>
+								{/* <Link href={project.url}>
 									<TooltipProvider delayDuration={100}>
 										<Tooltip>
 											<TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex items-center justify-center group">
@@ -186,7 +186,7 @@ const Work = () => {
 											</TooltipContent>
 										</Tooltip>
 									</TooltipProvider>
-								</Link>
+								</Link> */}
 							</div>
 						</div>
 					</div>
@@ -200,16 +200,10 @@ const Work = () => {
 							{projects.map((item, index) => {
 								return (
 									<SwiperSlide key={index} className="w-full">
-										<div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-											<div className="absolute top-0 bottom-0 w-full h-full bg-black/40 z-10"></div>
+										<div className="h-[460px] relative group flex justify-center items-center bg-primary">
+											{/* <div className="absolute top-0 bottom-0 w-full h-full bg-black/40 z-10"></div> */}
 											<div>
-												<img
-													src={`https://picsum.photos/752/460?random=${
-														index + 1
-													}`}
-													fill
-													className="object-cover"
-												/>
+												<img src={item.thumb} fill className="object-cover" />
 											</div>
 										</div>
 									</SwiperSlide>
