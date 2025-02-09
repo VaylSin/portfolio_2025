@@ -7,21 +7,18 @@ const statsPerso = [
 		number: 25,
 		title: "Projets réalisés",
 	},
-	{
-		number: 10,
-		title: "Clients satisfaits",
-	},
+
 	{
 		number: 7,
 		title: "Années d'expérience",
 	},
 	{
-		number: 8,
-		title: "Technologies maitrisées",
-	},
-	{
 		number: 500,
 		title: "Commits Github",
+	},
+	{
+		number: 8,
+		title: "Technologies maitrisées",
 	},
 ];
 

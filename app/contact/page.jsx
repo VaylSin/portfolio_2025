@@ -48,11 +48,13 @@ const Contact = () => {
 				<div className="flex flex-col-reverse xl:flex-row gap-[30px]">
 					<div className="xl:w-[54%] order-2 xl:order-none">
 						<form
-							action=""
+							name="contact"
 							method="POST"
-							// data-netlify="true"
+							data-netlify="true"
+							data-netlify-honeypot="bot-field"
 							className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
 						>
+							<input type="hidden" name="form-name" value="contact" />
 							<h3 className="text-4xl text-accent">Travaillons ensemble</h3>
 							<p className="text-white/60">
 								Vous avez un projet en tête et vous souhaitez en discuter ?
@@ -80,7 +82,6 @@ const Contact = () => {
 									name="email"
 									required
 								/>
-								{/* <input type="hidden" name="form-name" value="contact" /> */}
 							</div>
 							<Select name="sujet_demande">
 								<SelectTrigger className="w-full">

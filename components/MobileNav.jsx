@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
 
 const links = [
-	{ href: "/", name: "Home" },
+	{ href: "/", name: "Accueil" },
 	{ href: "/prestations", name: "Prestations" },
 	{ href: "/a-propos", name: "A propos" },
 	{ href: "/realisations", name: "Réalisations" },

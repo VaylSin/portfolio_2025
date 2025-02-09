@@ -18,7 +18,6 @@ import {
 } from "@radix-ui/react-tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
-import { Item } from "@radix-ui/react-select";
 
 const skills = {
 	title: "Compétences",
@@ -63,18 +62,18 @@ const about = {
 		</>
 	),
 	info: [
-		{ label: "Name", value: "Sylvain Butet" },
+		{ label: "Nom", value: "Sylvain Butet" },
 		{ label: "Email", value: "sylvain@skdigit.fr" },
 		{ label: "Experience", value: "10 ans" },
-		{ label: "Phone", value: "+33 6 87 78 28 58" },
-		{ label: "Location", value: "Lablachère, France" },
+		{ label: "Téléphone", value: "+33 6 87 78 28 58" },
+		{ label: "Localisation", value: "Lablachère, France" },
 		{ label: "Freelance", value: "Disponible" },
-		{ label: "Lang", value: "Français, Anglais" },
+		{ label: "Langue", value: "Français, Anglais" },
 	],
 };
 const experiences = {
 	icon: "assets/resume/badge.svg",
-	title: "Mes experiences",
+	title: "Mes éxperiences",
 	description:
 		"J'ai travaillé sur une variété de projets, allant de petits sites web à de grandes applications web. J'ai acquis de l'expérience en collaborant avec des clients de secteurs divers, tels que l'e-commerce, l'éducation et la santé. Je suis à l'aise dans des environnements dynamiques et je sais m'adapter rapidement aux exigences changeantes.",
 	items: [

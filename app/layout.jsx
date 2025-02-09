@@ -1,4 +1,9 @@
-import { Open_Sans } from "next/font/google";
+import {
+	Open_Sans,
+	Literata,
+	Roboto_Condensed,
+	Oswald,
+} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
@@ -8,6 +13,11 @@ const OpenSans = Open_Sans({
 	subsets: ["latin"],
 	weight: ["300", "400", "500", "600", "700", "800"],
 	variable: "--font-openSans",
+});
+const literata = Oswald({
+	subsets: ["latin"],
+	weight: ["300", "400", "500", "600", "700"],
+	variable: "--font-literata",
 });
 export const metadata = {
 	title: "SKDigit - Création de sites internet",
@@ -37,7 +47,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={`${OpenSans.variable} ${OpenSans.variable} antialiased`}>
+			<body className={`${literata.variable} ${literata.variable} antialiased`}>
 				<Header />
 				<StairTransition />
 				<PageTransition>{children}</PageTransition>

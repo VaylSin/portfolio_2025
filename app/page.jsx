@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Stats from "@/components/Stats";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const Home = () => {
 	return (
-		<section className="h-full">
+		<section className=" h-full xl:h-[calc(100vh-220px)] ">
 			<div className="container mx-auto h-full">
 				<div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
 					<div className="text-center xl:text-left order-2 xl:order-none">
@@ -50,7 +51,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<Stats />
+			<Footer />
 		</section>
 	);
 };
