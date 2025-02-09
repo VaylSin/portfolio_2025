@@ -35,6 +35,20 @@ const infos = [
 ];
 
 const Contact = () => {
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const formData = new FormData(e.target);
+		fetch("/", {
+			method: "POST",
+			body: formData,
+		})
+			.then(() => alert("Message envoyé avec succès"))
+			.catch((error) =>
+				alert(
+					"Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard."
+				)
+			);
+	};
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -53,6 +67,7 @@ const Contact = () => {
 							netlify
 							data-netlify-honeypot="bot-field"
 							className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+							onSubmit={handleSubmit}
 						>
 							<input type="hidden" name="form-name" value="contact" />
 							<h3 className="text-4xl text-accent">Travaillons ensemble</h3>
