@@ -8,28 +8,28 @@ const services = [
 		num: "01",
 		title: "Sites Wordpress / WooCommerce ",
 		description:
-			"Nous proposons des services de développement WordPress et WooCommerce pour votre entreprise. Que ce soit pour créer un site web sur mesure ou optimiser votre boutique en ligne existante, nous vous accompagnons à chaque étape. ",
+			"Je propose mes services de développement WordPress et WooCommerce pour votre entreprise. Que ce soit pour créer un site web sur mesure ou optimiser votre boutique en ligne existante, je serais avec vous à chaque étape. ",
 		link: "/services/web-development",
 	},
 	{
 		num: "02",
 		title: "Applications Web",
 		description:
-			"Nous concevons des applications web modernes et performantes avec React et Symfony. Que vous ayez besoin d’une solution sur mesure ou d’une optimisation de votre application existante, nous vous aidons à allier efficacité, scalabilité et expérience utilisateur fluide.",
+			"Je conçois des applications web modernes avec React et Symfony. Que vous ayez besoin d’une solution sur mesure ou d’une optimisation de votre application existante, Je vous aide à allier efficacité, scalabilité et expérience utilisateur fluide.",
 		link: "/services/web-development",
 	},
 	{
 		num: "03",
 		title: "Landing Pages",
 		description:
-			"Nous créons des landing pages optimisées pour convertir vos visiteurs en clients. Que ce soit pour un lancement de produit, une campagne marketing ou un événement, nous concevons des pages sur mesure, performantes et engageantes.",
+			"Je crée des landing pages pour convertir vos visiteurs en clients. Que ce soit pour un lancement de produit, une campagne marketing ou un événement, je conçois des pages sur mesure, performantes et engageantes.",
 		link: "/services/web-development",
 	},
 	{
 		num: "04",
 		title: "Optimisations Référencement ",
 		description:
-			"Nous optimisons votre site pour un meilleur référencement naturel (SEO). De l’audit technique à l’amélioration du contenu et des performances, nous mettons en place des stratégies efficaces pour booster votre visibilité et attirer plus de visiteurs qualifiés. ",
+			"Votre site est optimisé pour un meilleur référencement naturel (SEO). De l’audit technique à l’amélioration du contenu et des performances, je mets en place des stratégies efficaces pour booster votre visibilité et attirer plus de visiteurs qualifiés. ",
 		link: "/services/web-development",
 	},
 ];

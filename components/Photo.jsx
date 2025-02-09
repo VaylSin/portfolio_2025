@@ -30,13 +30,13 @@ const Photo = () => {
 					className="w-[298px] h-[298px] xl:w-[506px] xl:h-[506px] mix-blend-lighten absolute"
 				>
 					<Image
-						src="/assets/img/photo-skdigit-1.jpg"
+						src="/assets/img/profil-skdigit.jfif"
 						priority
 						quality={100}
 						fill
 						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Ajout de l'attribut sizes
 						alt="Photo de Sylvain Butet"
-						className="rounded-full object-contain transform scale-x-[-1]"
+						className="rounded-full object-contain "
 					/>
 				</motion.div>
 				<motion.svg

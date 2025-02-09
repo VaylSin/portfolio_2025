@@ -19,9 +19,9 @@ const Home = () => {
 							<span className="text-accent">SKDigit</span>
 						</h1>
 						<p className="max-w-[500px] mb-9 text-white/80">
-							Basé en Ardèche, j’accompagne mes clients dans la création de
-							projets web sur-mesure, en alliant performance, créativité et
-							expertise technique.
+							Basé dans la magnifique Sud-Ardèche, j’accompagne mes clients dans
+							la création de projets web sur-mesure, en alliant performance,
+							créativité et expertise technique.
 						</p>
 						<div className="flex flex-col xl:flex-row items-center gap-8">
 							<Link
