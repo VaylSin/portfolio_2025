@@ -42,7 +42,7 @@ const Contact = () => {
 			method: "POST",
 			body: formData,
 		})
-			.then(() => alert("Message envoyé avec succès"))
+			.then(() => alert("Message envoyé avec succès"), e.target.reset())
 			.catch((error) =>
 				alert(
 					"Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard."
@@ -64,7 +64,7 @@ const Contact = () => {
 						<form
 							name="contact"
 							method="POST"
-							netlify
+							netlify="true"
 							data-netlify-honeypot="bot-field"
 							className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
 							onSubmit={handleSubmit}
