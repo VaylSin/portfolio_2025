@@ -45,7 +45,7 @@ const Contact = () => {
 		buttonsStyling: false,
 	});
 	const handleSubmit = (e) => {
-		e.preventDefault();
+		// e.preventDefault();
 
 		customBtn.fire({
 			title: "Message envoyé !",
