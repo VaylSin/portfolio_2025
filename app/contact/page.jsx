@@ -69,27 +69,21 @@ const Contact = () => {
 			<div className="container mx-auto">
 				<div className="flex flex-col-reverse xl:flex-row gap-[30px]">
 					<div className="xl:w-[54%] order-2 xl:order-none">
-						<form
-							name="contact"
-							method="POST"
-							action="/"
-							data-netlify="true"
-							data-netlify-honeypot="bot-field"
-							onSubmit={handleSubmit}
-						>
-							<input type="hidden" name="form-name" value="contact" />
-							<input type="hidden" name="bot-field" />
-
-							<Input
+						<form name="contact" method="POST" action="/" data-netlify="true">
+							<input
 								type="text"
 								name="nom_complet"
 								placeholder="Nom + Prénom"
 								required
 							/>
-							<Input type="email" name="email" placeholder="Email" required />
-							<Textarea name="message" placeholder="Votre message" required />
-
-							<Button type="submit">Envoyer</Button>
+							<input type="email" name="email" placeholder="Email" required />
+							<textarea
+								name="message"
+								placeholder="Votre message"
+								required
+							></textarea>
+							<input type="hidden" name="bot-field" />
+							<button type="submit">Envoyer</button>
 						</form>
 						{/* <form
 							name="contact"
