@@ -15,6 +15,8 @@ import {
 import { motion } from "framer-motion";
 import { Icon } from "lucide-react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const infos = [
 	{
@@ -35,19 +37,25 @@ const infos = [
 ];
 
 const Contact = () => {
+	const customBtn = Swal.mixin({
+		customClass: {
+			confirmButton:
+				"inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white transition-colors bg-accent text-primary hover:bg-accent-hover h-[48px] px-6 max-w-40",
+		},
+		buttonsStyling: false,
+	});
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const formData = new FormData(e.target);
-		fetch("/", {
-			method: "POST",
-			body: formData,
-		})
-			.then(() => alert("Message envoyé avec succès"), e.target.reset())
-			.catch((error) =>
-				alert(
-					"Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard."
-				)
-			);
+
+		customBtn.fire({
+			title: "Message envoyé !",
+			text: "Nous tâchons de vous répondre dans les plus brefs délais.",
+			icon: "success",
+		});
+		setTimeout(() => {
+			e.target.submit();
+			e.target.reset();
+		}, 500);
 	};
 	return (
 		<motion.section
@@ -64,12 +72,15 @@ const Contact = () => {
 						<form
 							name="contact"
 							method="POST"
-							netlify="true"
+							action="/"
+							data-netlify="true"
 							data-netlify-honeypot="bot-field"
+							target="hidden_iframe"
 							className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
 							onSubmit={handleSubmit}
 						>
 							<input type="hidden" name="form-name" value="contact" />
+							<input type="hidden" name="bot-field" />
 							<h3 className="text-4xl text-accent">Travaillons ensemble</h3>
 							<p className="text-white/60">
 								Vous avez un projet en tête et vous souhaitez en discuter ?
@@ -146,6 +157,7 @@ const Contact = () => {
 					</div>
 				</div>
 			</div>
+			<iframe name="hidden_iframe" style={{ display: "none" }}></iframe>
 		</motion.section>
 	);
 };
