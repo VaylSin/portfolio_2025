@@ -72,15 +72,11 @@ const Contact = () => {
 						<form
 							name="contact_principal"
 							method="POST"
-							action="/"
-							data-netlify="true"
-							data-netlify-honeypot="bot-field"
+							action="https://formspree.io/f/xeoezywy"
 							target="hidden_iframe"
 							className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
 							onSubmit={handleSubmit}
 						>
-							<input type="hidden" name="form-name" value="contact_principal" />
-							<input type="hidden" name="bot-field" />
 							<h3 className="text-4xl text-accent">Travaillons ensemble</h3>
 							<p className="text-white/60">
 								Vous avez un projet en tête et vous souhaitez en discuter ?
