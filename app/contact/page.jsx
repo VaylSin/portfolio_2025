@@ -69,24 +69,8 @@ const Contact = () => {
 			<div className="container mx-auto">
 				<div className="flex flex-col-reverse xl:flex-row gap-[30px]">
 					<div className="xl:w-[54%] order-2 xl:order-none">
-						<form name="contact" method="POST" action="/" data-netlify="true">
-							<input
-								type="text"
-								name="nom_complet"
-								placeholder="Nom + Prénom"
-								required
-							/>
-							<input type="email" name="email" placeholder="Email" required />
-							<textarea
-								name="message"
-								placeholder="Votre message"
-								required
-							></textarea>
-							<input type="hidden" name="bot-field" />
-							<button type="submit">Envoyer</button>
-						</form>
-						{/* <form
-							name="contact"
+						<form
+							name="contact_principal"
 							method="POST"
 							action="/"
 							data-netlify="true"
@@ -95,7 +79,7 @@ const Contact = () => {
 							className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
 							onSubmit={handleSubmit}
 						>
-							<input type="hidden" name="form-name" value="contact" />
+							<input type="hidden" name="form-name" value="contact_principal" />
 							<input type="hidden" name="bot-field" />
 							<h3 className="text-4xl text-accent">Travaillons ensemble</h3>
 							<p className="text-white/60">
@@ -154,7 +138,7 @@ const Contact = () => {
 							<Button type="submit" size="md" className="max-w-40">
 								Envoyer
 							</Button>
-						</form> */}
+						</form>
 					</div>
 					<div className="flex-1 flex items-center justify-center lg:justify-start xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
 						<ul className="flex flex-col gap-10">
