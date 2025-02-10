@@ -75,6 +75,28 @@ const Contact = () => {
 							action="/"
 							data-netlify="true"
 							data-netlify-honeypot="bot-field"
+							onSubmit={handleSubmit}
+						>
+							<input type="hidden" name="form-name" value="contact" />
+							<input type="hidden" name="bot-field" />
+
+							<Input
+								type="text"
+								name="nom_complet"
+								placeholder="Nom + Prénom"
+								required
+							/>
+							<Input type="email" name="email" placeholder="Email" required />
+							<Textarea name="message" placeholder="Votre message" required />
+
+							<Button type="submit">Envoyer</Button>
+						</form>
+						{/* <form
+							name="contact"
+							method="POST"
+							action="/"
+							data-netlify="true"
+							data-netlify-honeypot="bot-field"
 							target="hidden_iframe"
 							className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
 							onSubmit={handleSubmit}
@@ -138,7 +160,7 @@ const Contact = () => {
 							<Button type="submit" size="md" className="max-w-40">
 								Envoyer
 							</Button>
-						</form>
+						</form> */}
 					</div>
 					<div className="flex-1 flex items-center justify-center lg:justify-start xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
 						<ul className="flex flex-col gap-10">
