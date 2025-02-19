@@ -15,10 +15,10 @@ const Modal = ({ isOpen, onClose, content }) => {
 			exit={{ opacity: 0 }}
 			className="fixed inset-0 bg-primary  "
 		>
-			<div className="bg-primary flex flex-col gap-8 items-center justify-center w-full h-full p-16 overflow-auto relative">
+			<div className="bg-primary flex flex-col gap-8 items-center xl:justify-center w-full h-full p-4 lg:p-16 overflow-auto relative">
 				<button
 					onClick={onClose}
-					className="absolute w-15 top-12 right-12 text-white"
+					className="lg:absolute mt-8 lg:mt-0 w-15 top-12 right-12 text-white"
 				>
 					<RiCloseLargeFill size={32} />
 				</button>

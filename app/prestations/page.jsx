@@ -14,13 +14,13 @@ const services = [
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
-				<h2 className="text-3xl font-bold mb-4">
+				<h2 className="text-2xl lg:text-3xl font-bold mb-8">
 					WordPress & WooCommerce : Une solution accessible et puissante
 				</h2>
-				<h3 className="text-2xl font-semibold mb-3">
+				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Un back-office conçu pour être simple et efficace
 				</h3>
-				<p className="mb-4">
+				<p className="mb-8 lg:mb-4">
 					WordPress est pensé pour être utilisable sans compétences techniques.
 					L’interface d’administration est intuitive :
 				</p>
@@ -42,10 +42,10 @@ const services = [
 						ou un plugin pour ajouter des fonctionnalités sans toucher au code.
 					</li>
 				</ul>
-				<h3 className="text-2xl font-semibold mb-3">
+				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Sécurité : Une plateforme solide avec les bonnes pratiques
 				</h3>
-				<p className="mb-4">
+				<p className="mb-8 lg:mb-4">
 					WordPress est parfois perçu comme une plateforme vulnérable, mais en
 					réalité, sa popularité en fait une cible privilégiée. Un site bien
 					maintenu et sécurisé n’a pas plus de risques qu’un autre CMS.
@@ -63,7 +63,7 @@ const services = [
 						Avoir un hébergement sécurisé qui bloque les attaques courantes.
 					</li>
 				</ul>
-				<h3 className="text-2xl font-semibold mb-3">
+				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Un écosystème gigantesque qui assure l’évolutivité
 				</h3>
 				<ul className="list-disc list-inside mb-4">
@@ -87,13 +87,13 @@ const services = [
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
-				<h2 className="text-3xl font-bold mb-4">
+				<h2 className="text-2xl lg:text-3xl font-bold mb-8">
 					React & Symfony : Une Alliance Moderne et Performante
 				</h2>
-				<h3 className="text-2xl font-semibold mb-3">
+				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					React : Dynamisme et Expérience Utilisateur
 				</h3>
-				<p className="mb-4">
+				<p className="mb-8 lg:mb-4">
 					React permet de créer des interfaces interactives et ultra-fluides.
 					Grâce au chargement asynchrone des éléments, la navigation est rapide
 					et immersive, idéale pour les applications web modernes.
@@ -103,10 +103,10 @@ const services = [
 					<li>Performance optimisée pour les applications interactives.</li>
 					<li>Supporté par Meta et une large communauté.</li>
 				</ul>
-				<h3 className="text-2xl font-semibold mb-3">
+				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Symfony : Un Back-Office Sécurisé et Sur-Mesure
 				</h3>
-				<p className="mb-4">
+				<p className="mb-8 lg:mb-4">
 					Symfony est un framework robuste, adapté aux projets nécessitant un
 					back-office personnalisé et sécurisé. Il offre une flexibilité totale
 					sans dépendance aux plugins tiers.
@@ -127,11 +127,11 @@ const services = [
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
-				<h2 className="text-3xl font-bold mb-4">
+				<h2 className="text-2xl lg:text-3xl font-bold mb-8">
 					L'importance d'une Landing Page : Capturer l'attention et maximiser la
 					conversion
 				</h2>
-				<p className="mb-4">
+				<p className="mb-8 lg:mb-4">
 					Une landing page bien conçue joue un rôle fondamental dans le parcours
 					utilisateur en ligne. Elle sert de point de contact direct entre votre
 					audience et votre offre. L’objectif principal est de convertir un
@@ -143,7 +143,7 @@ const services = [
 					toute distraction. Plus elle est simple et bien ciblée, plus elle
 					maximisera les taux de conversion.
 				</p>
-				<p className="mb-4">
+				<p className="mb-8 lg:mb-4">
 					En intégrant des éléments de preuve sociale (témoignages, avis
 					clients), des garanties, et une promesse claire de valeur ajoutée, la
 					landing page instaure également la confiance. Elle permet de répondre
@@ -153,12 +153,12 @@ const services = [
 					moteurs de recherche, augmentant ainsi ses chances d'attirer des
 					prospects qualifiés.
 				</p>
-				<p className="mb-4">
+				<p className="mb-8 lg:mb-4">
 					En somme, une landing page n'est pas juste une page d'atterrissage,
 					mais un outil stratégique essentiel pour maximiser le retour sur
 					investissement de vos campagnes marketing en ligne.
 				</p>
-				<h3 className="text-2xl font-semibold mb-3">
+				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Avantages d'une Landing Page efficace :
 				</h3>
 				<ul className="list-disc list-inside mb-4">
@@ -206,13 +206,13 @@ const services = [
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
-				<h2 className="text-3xl font-bold mb-4">
+				<h2 className="text-2xl lg:text-3xl font-bold mb-8">
 					SEO : L’Art d’Être Visible sur Google
 				</h2>
-				<h3 className="text-2xl font-semibold mb-3">
+				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Pourquoi le SEO est essentiel ?
 				</h3>
-				<p className="mb-4">
+				<p className="mb-8 lg:mb-4">
 					Avoir un site web, c’est bien. Mais s’il n’apparaît pas dans les
 					premiers résultats de Google, il risque de ne jamais être vu.
 					Aujourd’hui, 93% des expériences en ligne commencent par une recherche
@@ -220,7 +220,7 @@ const services = [
 					bon SEO permet d’attirer des visiteurs qualifiés et d’augmenter la
 					visibilité sans dépendre de la publicité payante.
 				</p>
-				<h3 className="text-2xl font-semibold mb-3">
+				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Les 3 Piliers du Référencement
 				</h3>
 				<h4 className="text-xl font-semibold mb-2">
@@ -260,7 +260,7 @@ const services = [
 						visiteurs restent longtemps et interagissent.
 					</li>
 				</ul>
-				<h3 className="text-2xl font-semibold mb-3">
+				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Comment optimiser son SEO efficacement ?
 				</h3>
 			</section>
