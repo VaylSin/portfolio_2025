@@ -40,7 +40,7 @@ export const metadata = {
 		"création site sur mesure Ardèche",
 		"création site web",
 	],
-	robots: "noindex, nofollow",
+	robots: "index, follow",
 	authors: [{ name: "Sylvain Butet", url: "https://skdigit.com" }],
 };
 
