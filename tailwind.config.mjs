@@ -19,7 +19,7 @@ export default {
 				xl: "80rem",
 			},
 			fontFamily: {
-				primary: "var(--font-openSans)",
+				primary: "var(--font-RalewayFont)",
 			},
 			colors: {
 				primary: "#253137",

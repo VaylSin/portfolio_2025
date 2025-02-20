@@ -30,7 +30,8 @@ const Photo = () => {
 					className="w-[298px] h-[298px] xl:w-[506px] xl:h-[506px] mix-blend-lighten absolute"
 				>
 					<Image
-						src="/assets/img/profil-skdigit.jfif"
+						// src="/assets/img/profil-skdigit.jfif"
+						src="/assets/img/sylvain-butet-skdigit.jpg"
 						priority
 						quality={100}
 						fill

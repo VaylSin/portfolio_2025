@@ -63,7 +63,7 @@ const about = {
 	),
 	info: [
 		{ label: "Nom", value: "Sylvain Butet" },
-		{ label: "Email", value: "sylvain@skdigit.fr" },
+		{ label: "Email", value: "contact@skdigit.fr" },
 		{ label: "Experience", value: "10 ans" },
 		{ label: "Téléphone", value: "+33 6 87 78 28 58" },
 		{ label: "Localisation", value: "Lablachère, France" },
@@ -251,8 +251,13 @@ const Resume = () => {
 							value="about"
 							className="w-full text-center xl:text-left"
 						>
-							<div className="flex flex-col gap-[30px]">
+							<div className="flex flex-col gap-[30px] mb-16">
 								<h3 className="text-4xl font-bold">{about.title}</h3>
+								<img
+									className="w-[300px] h-[300px] rounded-full mx-auto xl:mx-0 border border-accent"
+									src="/assets/img/sylvain-butet-skdigit-portrait.jpg"
+									alt="Sylvain Butet - SKDigit - Développeur Full-Stack Ardèche "
+								/>
 								<p className="max-w-[800px] text-white/60 mx-auto xl:mx-0">
 									{about.description}
 								</p>

@@ -12,7 +12,7 @@ const Footer = () => {
 						<ul className="flex  gap-4 ">
 							<li>
 								<a
-									href="#"
+									href="/mentions-legales"
 									className="text-black hover:text-black/60 transition-all duration-500"
 								>
 									Mentions légales

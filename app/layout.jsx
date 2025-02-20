@@ -1,7 +1,8 @@
 import {
 	Open_Sans,
-	Literata,
+	Literata as LiterataFont,
 	Roboto_Condensed,
+	Raleway as RalewayFont,
 	Oswald,
 } from "next/font/google";
 import "./globals.css";
@@ -9,12 +10,18 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 
-const OpenSans = Open_Sans({
+const Raleway = RalewayFont({
 	subsets: ["latin"],
 	weight: ["300", "400", "500", "600", "700", "800"],
-	variable: "--font-openSans",
+	variable: "--font-RalewayFont",
 });
-const literata = Oswald({
+
+const oswald = Oswald({
+	subsets: ["latin"],
+	weight: ["300", "400", "500", "600", "700"],
+	variable: "--font-oswald",
+});
+const literata = LiterataFont({
 	subsets: ["latin"],
 	weight: ["300", "400", "500", "600", "700"],
 	variable: "--font-literata",
@@ -42,12 +49,19 @@ export const metadata = {
 	],
 	robots: "index, follow",
 	authors: [{ name: "Sylvain Butet", url: "https://skdigit.com" }],
+	og: {
+		title: "SKDigit - Création de sites internet",
+		description:
+			"Développeur freelance basé à Lablachère en Ardèche, spécialisé en WordPress , Symfony et React. Projets web sur mesure pour Aubenas, Les Vans et alentours. Contactez-moi pour vos besoins en création de sites et applications web.",
+		image: "https://skdigit.com/assets/img/web_banner.png",
+		url: "https://skdigit.com",
+	},
 };
 
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={`${literata.variable} ${literata.variable} antialiased`}>
+			<body className={`${Raleway.variable} ${Raleway.variable} antialiased`}>
 				<Header />
 				<StairTransition />
 				<PageTransition>{children}</PageTransition>
