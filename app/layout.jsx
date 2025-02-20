@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
 		robots: robots,
 		authors: [{ name: "Sylvain Butet", url: "https://skdigit.com" }],
 		og: {
-			title: "SKDigit - Création de sites internet",
+			title: "SKDigit - Création de sites internet et d'applications web",
 			description:
 				"Développeur freelance basé à Lablachère en Ardèche, spécialisé en WordPress , Symfony et React. Projets web sur mesure pour Aubenas, Les Vans et alentours. Contactez-moi pour vos besoins en création de sites et applications web.",
 			image: "https://skdigit.com/web_banner.png",
@@ -69,6 +69,9 @@ export default function RootLayout({ children }) {
 				<meta property="og:title" content={metadata.og.title} />
 				<meta property="og:description" content={metadata.og.description} />
 				<meta property="og:image" content={metadata.og.image} />
+				<meta property="og:image:width" content="1200" />
+				<meta property="og:image:height" content="630" />
+				<meta property="og:image:alt" content="Logo de Skdigit" />
 				<meta property="og:url" content={metadata.og.url} />
 				<meta property="og:type" content="website" />
 			</head>
