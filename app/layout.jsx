@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
 			title: "SKDigit - Création de sites internet",
 			description:
 				"Développeur freelance basé à Lablachère en Ardèche, spécialisé en WordPress , Symfony et React. Projets web sur mesure pour Aubenas, Les Vans et alentours. Contactez-moi pour vos besoins en création de sites et applications web.",
-			image: "https://skdigit.com/assets/img/web_banner.png",
+			image: "https://skdigit.com/web_banner.png",
 			url: "https://skdigit.com",
 		},
 	};
