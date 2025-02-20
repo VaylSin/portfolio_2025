@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
 			setRobots("noindex, nofollow");
 		}
 	}, []);
+
 	const metadata = {
 		title: "SKDigit - Création de sites internet",
 		description:
@@ -45,7 +46,7 @@ export default function RootLayout({ children }) {
 			"création site sur mesure Ardèche",
 			"création site web",
 		],
-		robots: "index, follow",
+		robots: robots,
 		authors: [{ name: "Sylvain Butet", url: "https://skdigit.com" }],
 		og: {
 			title: "SKDigit - Création de sites internet",
@@ -55,8 +56,22 @@ export default function RootLayout({ children }) {
 			url: "https://skdigit.com",
 		},
 	};
+
 	return (
 		<html lang="en">
+			<head>
+				<meta name="robots" content={metadata.robots} />
+				<title>{metadata.title}</title>
+				<meta name="description" content={metadata.description} />
+				<meta name="keywords" content={metadata.keywords.join(", ")} />
+				<meta name="author" content={metadata.authors[0].name} />
+				<link rel="canonical" href={metadata.authors[0].url} />
+				<meta property="og:title" content={metadata.og.title} />
+				<meta property="og:description" content={metadata.og.description} />
+				<meta property="og:image" content={metadata.og.image} />
+				<meta property="og:url" content={metadata.og.url} />
+				<meta property="og:type" content="website" />
+			</head>
 			<body className={`${Raleway.variable} ${Raleway.variable} antialiased`}>
 				<Header />
 				<StairTransition />
