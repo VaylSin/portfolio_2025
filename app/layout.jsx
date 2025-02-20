@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import { useEffect, useState } from "react";
+import Script from "next/script";
 
 const Raleway = RalewayFont({
 	subsets: ["latin"],
@@ -79,6 +80,22 @@ export default function RootLayout({ children }) {
 				<Header />
 				<StairTransition />
 				<PageTransition>{children}</PageTransition>
+				<Script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-77RFQ986CT"
+				></Script>
+				<Script
+					id="google-analytics"
+					strategy="afterInteractive"
+					dangerouslySetInnerHTML={{
+						__html: `
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', 'G-77RFQ986CT');
+            			`,
+					}}
+				/>
 			</body>
 		</html>
 	);
