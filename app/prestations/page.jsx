@@ -10,7 +10,7 @@ const services = [
 		num: "01",
 		title: "Sites Wordpress / WooCommerce",
 		description:
-			"Je propose mes services de développement WordPress et WooCommerce pour votre entreprise. Que ce soit pour créer un site web sur mesure ou optimiser votre boutique en ligne existante, je serais avec vous à chaque étape.",
+			"Je propose mes services de développement WordPress et WooCommerce pour votre entreprise. Que ce soit pour créer un site web sur mesure ou optimiser votre boutique en ligne existante, je suis avec vous à chaque étape.",
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
@@ -83,7 +83,7 @@ const services = [
 		num: "02",
 		title: "Applications Web",
 		description:
-			"Je conçois des applications web modernes avec React et Symfony. Que vous ayez besoin d’une solution sur mesure ou d’une optimisation de votre application existante, Je vous aide à allier efficacité, scalabilité et expérience utilisateur fluide.",
+			"Je conçois des applications web modernes avec React et Symfony. Que vous ayez besoin d’une solution sur mesure ou d’une optimisation de votre application existante, je vous aide à allier efficacité, scalabilité et expérience utilisateur fluide.",
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
