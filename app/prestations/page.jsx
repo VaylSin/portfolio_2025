@@ -14,7 +14,7 @@ const services = [
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
-				<h2 className="text-2xl lg:text-3xl font-bold mb-8">
+				<h2 className="text-2xl lg:text-3xl font-bold mb-8 text-accent ">
 					WordPress & WooCommerce : Une solution accessible et puissante
 				</h2>
 				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
@@ -87,7 +87,7 @@ const services = [
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
-				<h2 className="text-2xl lg:text-3xl font-bold mb-8">
+				<h2 className="text-2xl lg:text-3xl font-bold mb-8 text-accent">
 					React & Symfony : Une Alliance Moderne et Performante
 				</h2>
 				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
@@ -127,7 +127,7 @@ const services = [
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
-				<h2 className="text-2xl lg:text-3xl font-bold mb-8">
+				<h2 className="text-2xl lg:text-3xl font-bold mb-8 text-accent ">
 					L'importance d'une Landing Page : Capturer l'attention et maximiser la
 					conversion
 				</h2>
@@ -206,7 +206,7 @@ const services = [
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
-				<h2 className="text-2xl lg:text-3xl font-bold mb-8">
+				<h2 className="text-2xl lg:text-3xl font-bold mb-8 text-accent">
 					SEO : L’Art d’Être Visible sur Google
 				</h2>
 				<h3 className="text-xl lg:text-2xl font-semibold mb-3">

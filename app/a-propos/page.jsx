@@ -18,9 +18,11 @@ import {
 } from "@radix-ui/react-tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const skills = {
-	title: "Compétences",
+	title: "Ce que j'utilise",
 	description:
 		"J'ai développé des compétences avec un large éventail de technologies et d'outils. Voici un aperçu des principales compétences que j'ai acquises au fil de mon expérience.",
 	items: [
@@ -36,7 +38,7 @@ const skills = {
 };
 
 const about = {
-	title: "Développeur full-stack",
+	title: "Qui je suis ?",
 	description: (
 		<>
 			Suite à une reconversion professionnelle en 2015, j’ai eu l’opportunité
@@ -62,18 +64,14 @@ const about = {
 		</>
 	),
 	info: [
-		{ label: "Nom", value: "Sylvain Butet" },
-		{ label: "Email", value: "contact@skdigit.fr" },
 		{ label: "Experience", value: "10 ans" },
-		{ label: "Téléphone", value: "+33 6 87 78 28 58" },
-		{ label: "Localisation", value: "Lablachère, France" },
 		{ label: "Freelance", value: "Disponible" },
 		{ label: "Langue", value: "Français, Anglais" },
 	],
 };
 const experiences = {
 	icon: "assets/resume/badge.svg",
-	title: "Mes éxperiences",
+	title: "Mon parcours",
 	description:
 		"J'ai travaillé sur une variété de projets, allant de petits sites web à de grandes applications web. J'ai acquis de l'expérience en collaborant avec des clients de secteurs divers, tels que l'e-commerce, l'éducation et la santé. Je suis à l'aise dans des environnements dynamiques et je sais m'adapter rapidement aux exigences changeantes.",
 	items: [
@@ -111,7 +109,7 @@ const experiences = {
 };
 const education = {
 	icon: "assets/resume/graduation.svg",
-	title: "Mes formations",
+	title: "Mon cursus",
 	description:
 		"I have a Bachelor's degree in Computer Science from the University of Paris. I also have a Master's degree in Web Development from the University of Lyon. I am constantly learning new technologies and improving my skills to stay up-to-date with the latest trends in web development.",
 	items: [
@@ -161,7 +159,9 @@ const Resume = () => {
 					<div className="min-h-[70vh] w-full">
 						<TabsContent value="experience" className="w-full">
 							<div className="flex flex-col gap-[30px] text-center xl:text-left">
-								<h3 className="text-4xl font-bold">{experiences.title}</h3>
+								<h3 className="text-4xl font-bold text-accent">
+									{experiences.title}
+								</h3>
 								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
 									{experiences.description}
 								</p>
@@ -190,7 +190,9 @@ const Resume = () => {
 						</TabsContent>
 						<TabsContent value="formations" className="w-full">
 							<div className="flex flex-col gap-[30px] text-center xl:text-left">
-								<h3 className="text-4xl font-bold">{education.title}</h3>
+								<h3 className="text-4xl font-bold text-accent">
+									{education.title}
+								</h3>
 								{/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
 									{education.description}
 								</p> */}
@@ -220,28 +222,45 @@ const Resume = () => {
 						<TabsContent value="skills" className="w-full h-full">
 							<div className="flex flex-col gap-[30px]">
 								<div className="flex flex-col gap-[30px] text-center xl:text-left">
-									<h3 className="text-4xl font-bold">{skills.title}</h3>
+									<h3 className="text-4xl font-bold text-accent">
+										{skills.title}
+									</h3>
 									<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
 										{skills.description}
 									</p>
 								</div>
 								<ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[20px] text-center xl:text-left mt-8 xl:mt-0">
 									{skills.items.map((skill, index) => {
+										const delay = 0.2 + index * 0.1;
 										return (
-											<li key={index}>
-												<TooltipProvider>
-													<Tooltip>
-														<TooltipTrigger className="w-full h-[150px] bg-[#3A4C55] rounded-xl flex justify-center items-center group">
-															<div className="text-6xl group-hover:text-accent transition-all duration-300">
-																{skill.icon}
-															</div>
-														</TooltipTrigger>
-														<TooltipContent>
-															<p className="capitalize">{skill.name}</p>
-														</TooltipContent>
-													</Tooltip>
-												</TooltipProvider>
-											</li>
+											<motion.div
+												key={index}
+												initial={{ opacity: 0, y: 100 }}
+												animate={{
+													opacity: 1,
+													y: 0,
+													transition: {
+														delay: delay,
+														duration: 0.4,
+														ease: "easeInOut",
+													},
+												}}
+											>
+												<li>
+													<TooltipProvider>
+														<Tooltip>
+															<TooltipTrigger className="w-full h-[150px] bg-[#3A4C55] rounded-xl flex justify-center items-center group">
+																<div className="text-6xl group-hover:text-accent transition-all duration-300">
+																	{skill.icon}
+																</div>
+															</TooltipTrigger>
+															<TooltipContent>
+																<p className="capitalize">{skill.name}</p>
+															</TooltipContent>
+														</Tooltip>
+													</TooltipProvider>
+												</li>
+											</motion.div>
 										);
 									})}
 								</ul>
@@ -252,16 +271,33 @@ const Resume = () => {
 							className="w-full text-center xl:text-left"
 						>
 							<div className="flex flex-col gap-[30px] mb-16">
-								<h3 className="text-4xl font-bold">{about.title}</h3>
-								<img
-									className="w-[300px] h-[300px] rounded-full mx-auto xl:mx-0 border border-accent"
-									src="/assets/img/sylvain-butet-skdigit-portrait.jpg"
-									alt="Sylvain Butet - SKDigit - Développeur Full-Stack Ardèche "
-								/>
+								<h3 className="text-4xl  font-bold text-accent">
+									{about.title}
+								</h3>
+								<motion.div
+									initial={{ opacity: 0, y: -100 }}
+									animate={{
+										opacity: 1,
+										y: 0,
+										transition: {
+											delay: 0.2,
+											duration: 0.5,
+											ease: "easeInOut",
+										},
+									}}
+									exit={{ opacity: 0, y: 0 }}
+									className="py-6"
+								>
+									<img
+										className="w-[300px] h-[300px]  rounded-full mx-auto xl:mx-0 border border-accent"
+										src="/assets/img/sylvain-butet-skdigit-portrait.jpg"
+										alt="Sylvain Butet - SKDigit - Développeur Full-Stack Ardèche "
+									/>
+								</motion.div>
 								<p className="max-w-[800px] text-white/60 mx-auto xl:mx-0">
 									{about.description}
 								</p>
-								<ul className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+								<ul className="grid  max-w-[800px] grid-cols-1 lg:grid-cols-3  gap-y-6  mx-auto xl:mx-0">
 									{about.info.map((info, index) => {
 										return (
 											<li
@@ -274,6 +310,9 @@ const Resume = () => {
 										);
 									})}
 								</ul>
+								<Link href="/contact" className="w-full py-4">
+									<Button>Une question ? Un devis ? Par ici !</Button>
+								</Link>
 							</div>
 						</TabsContent>
 					</div>
