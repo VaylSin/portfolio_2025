@@ -142,18 +142,17 @@ const MentionsLegales = () => {
 					Collecte des données :
 				</h2>
 				<p className="mb-4 text-secondary">
-					Nous collectons des données personnelles lorsque vous [inscrivez sur
-					le site, passez une commande, etc.]. Ces données incluent [nom,
-					adresse e-mail, adresse postale, etc.].
+					Nous collectons des données personnelles lorsque vous naviguez sur le
+					site, ces données incluent nom, prénom adresse e-mail, informations de
+					tracking via Google Analytics.
 				</p>
 
 				<h2 className="text-2xl font-semibold mb-4 text-accent">
 					Utilisation des données :
 				</h2>
 				<p className="mb-4 text-secondary">
-					Les données collectées sont utilisées pour [gérer les commandes,
-					personnaliser l’expérience utilisateur, envoyer des newsletters,
-					etc.].
+					Les données collectées sont utilisées pour améliorer le site, analyser
+					le trafic,personnaliser l’expérience utilisateur.
 				</p>
 
 				<h2 className="text-2xl font-semibold mb-4 text-accent">
