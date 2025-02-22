@@ -59,61 +59,15 @@ const projects = [
 	},
 	{
 		num: "03",
-		category: "Developpement ReactJS",
-		thumb: "/assets/img/crypto.png",
-		title: "Crypto App",
-		description:
-			"Une petite application listant et détaillant les principales Cryptos du marché",
-		url: "https://crypto.skdigit.com",
-		stack: ["ReactJS", "TailwindCSS", "CoinGecko API"],
-	},
-	{
-		num: "04",
-		category: "Développement ReactJS",
-		thumb: "/assets/img/quiz.png",
-		title: "CultureQuiz",
-		description: "Un petit quizz de culture générale",
-		url: "https://culturequiz.skdigit.com",
-		stack: ["ReactJS", "Css3"],
-	},
-	{
-		num: "05",
-		category: "Développement ReactJS",
-		thumb: "/assets/img/youtube.png",
-		title: "Youtube Clone",
-		description: "Un clone de Youtube en ReactJS",
-		url: "https://youtube.skdigit.com",
-		stack: ["ReactJS", "TailwindCSS", "Youtube API"],
-	},
-	{
-		num: "06",
-		category: "Développement Front-End",
-		thumb: "/assets/img/landing.png",
-		title: "Landing Page",
-		description: "Un exemple de Landing Page",
-		url: "https://landing.skdigit.com",
-		stack: ["Html5", "TailwindCSs", "Aos"],
-	},
-	{
-		num: "07",
 		category: "Développement Wordpress / WebDesign",
-		thumb: "/assets/img/kosho.png",
-		title: "KoshoBrewers",
-		description: "Une micro-brasserie sur fond de thématique Coréenne",
-		url: "https://www.koshobrewers.com",
-		stack: ["Wordpress", "ACF", "Sass"],
-	},
-	{
-		num: "08",
-		category: "Développement Wordpress / WebDesign",
-		thumb: "/assets/img/lovecraft.png",
+		thumb: "/assets/img/lovecraft.jpg",
 		title: "LeLovecraft",
 		description: "Bar / Restaurant / Salle de concert basé à Nantes",
 		url: "https://www.lelovecraft.com",
 		stack: ["Wordpress", "Sass", "ACF", "Aos"],
 	},
 	{
-		num: "09",
+		num: "04",
 		category: "Blog Wordpress",
 		thumb: "/assets/img/johanna.png",
 		title: "Johanna De Rangot",
@@ -122,12 +76,58 @@ const projects = [
 		url: "https://www.johannaderangot.com/",
 		stack: ["Wordpress", "ACF", "Sass"],
 	},
+	{
+		num: "05",
+		category: "Développement Front-End",
+		thumb: "/assets/img/landing.png",
+		title: "Landing Page",
+		description: "Un exemple de Landing Page",
+		url: "https://landing.skdigit.com",
+		stack: ["Html5", "TailwindCSs", "Aos"],
+	},
+	{
+		num: "06",
+		category: "Developpement ReactJS",
+		thumb: "/assets/img/crypto.jpg",
+		title: "Crypto App",
+		description:
+			"Une petite application listant et détaillant les principales Cryptos du marché",
+		url: "https://crypto.skdigit.com",
+		stack: ["ReactJS", "TailwindCSS", "CoinGecko API"],
+	},
+	{
+		num: "07",
+		category: "Développement ReactJS",
+		thumb: "/assets/img/quiz.png",
+		title: "CultureQuiz",
+		description: "Un petit quizz de culture générale",
+		url: "https://culturequiz.skdigit.com",
+		stack: ["ReactJS", "Css3"],
+	},
+	{
+		num: "08",
+		category: "Développement ReactJS",
+		thumb: "/assets/img/youtube.jpg",
+		title: "Youtube Clone",
+		description: "Un clone de Youtube en ReactJS",
+		url: "https://youtube.skdigit.com",
+		stack: ["ReactJS", "Material UI", "Youtube API"],
+	},
+	{
+		num: "09",
+		category: "Développement Wordpress / WebDesign",
+		thumb: "/assets/img/kosho.png",
+		title: "KoshoBrewers",
+		description: "Une micro-brasserie sur fond de thématique Coréenne",
+		url: "https://www.koshobrewers.com",
+		stack: ["Wordpress", "ACF", "Sass"],
+	},
 ];
 
 const Work = () => {
 	const [project, setProject] = useState(projects[0]);
 
-	const handleSlideChange = (swiper) => {
+	const handleSlideChange = (swiper: any) => {
 		const currentIndex = swiper.activeIndex;
 		setProject(projects[currentIndex]);
 	};
@@ -204,7 +204,12 @@ const Work = () => {
 											<div className="lg:h-[460px] relative group flex justify-center items-center bg-primary">
 												{/* <div className="absolute top-0 bottom-0 w-full h-full bg-black/40 z-10"></div> */}
 												<div>
-													<img src={item.thumb} fill className="object-cover" />
+													<Image
+														src={item.thumb}
+														fill
+														className="object-cover"
+														alt={item.title}
+													/>
 												</div>
 											</div>
 										</SwiperSlide>
@@ -213,6 +218,7 @@ const Work = () => {
 								<WorkSliderBtns
 									containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
 									btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] h-[44px] w-[44px] flex justify-center items-center transition-all duration-300"
+									iconStyles="text-white"
 								/>
 							</Swiper>
 						</div>

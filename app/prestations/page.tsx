@@ -270,9 +270,9 @@ const services = [
 
 const Services = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [modalContent, setModalContent] = useState(null);
+	const [modalContent, setModalContent] = useState<React.ReactNode>(null);
 
-	const handleOpenModal = (content) => {
+	const handleOpenModal = (content: React.ReactNode) => {
 		setModalContent(content);
 		setIsModalOpen(true);
 	};

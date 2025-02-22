@@ -6,7 +6,12 @@ const socials = [
 	{ icon: <FaLinkedin />, path: "https://www.linkedin.com/in/sylvain-butet" },
 	{ icon: <FaTwitter />, path: "https://x.com/sly_b33" },
 ];
-const Socials = ({ containerStyles, iconStyles }) => {
+interface SocialsProps {
+	containerStyles?: string;
+	iconStyles?: string;
+}
+
+const Socials: React.FC<SocialsProps> = ({ containerStyles, iconStyles }) => {
 	return (
 		<div className={`flex items-center gap-4 ${containerStyles}`}>
 			{socials.map((social, index) => (

@@ -44,7 +44,7 @@ const Contact = () => {
 		},
 		buttonsStyling: false,
 	});
-	const handleSubmit = (e) => {
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		// e.preventDefault();
 
 		customBtn.fire({
@@ -53,8 +53,8 @@ const Contact = () => {
 			icon: "success",
 		});
 		setTimeout(() => {
-			e.target.submit();
-			e.target.reset();
+			e.currentTarget.submit();
+			e.currentTarget.reset();
 		}, 500);
 	};
 	return (

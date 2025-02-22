@@ -4,8 +4,15 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { Button } from "./ui/button";
+import { ReactNode } from "react";
 
-const Modal = ({ isOpen, onClose, content }) => {
+interface ModalProps {
+	isOpen: boolean;
+	onClose: () => void;
+	content: ReactNode;
+}
+
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, content }) => {
 	if (!isOpen) return null;
 
 	return (

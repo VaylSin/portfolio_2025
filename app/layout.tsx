@@ -5,7 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 import Script from "next/script";
 
 const Raleway = RalewayFont({
@@ -13,8 +13,10 @@ const Raleway = RalewayFont({
 	weight: ["300", "400", "500", "600", "700", "800"],
 	variable: "--font-RalewayFont",
 });
-
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+	children: ReactNode;
+}
+export default function RootLayout({ children }: RootLayoutProps) {
 	const [robots, setRobots] = useState("index, follow");
 
 	useEffect(() => {
