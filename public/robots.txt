@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://skdigit.com
+
+# Sitemaps
+Sitemap: https://skdigit.com/sitemap.xml

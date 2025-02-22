@@ -2,9 +2,9 @@
 
 import { Raleway as RalewayFont } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
+import Header from "../components/Header";
+import PageTransition from "../components/PageTransition";
+import StairTransition from "../components/StairTransition";
 import { useEffect, useState, ReactNode } from "react";
 import Script from "next/script";
 

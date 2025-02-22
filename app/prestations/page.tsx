@@ -1,6 +1,6 @@
 "use client";
-import Modal from "@/components/Modal";
-import { delay, motion } from "framer-motion";
+import Modal from "../../components/Modal";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { BsArrowDownRight } from "react-icons/bs";
@@ -297,7 +297,7 @@ const Services = () => {
 					}}
 					className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
 				>
-					{services.map((service, index, count) => {
+					{services.map((service, index) => {
 						return (
 							<div
 								key={index}

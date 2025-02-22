@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { Textarea } from "../../components/ui/textarea";
 import {
 	Select,
 	SelectLabel,
@@ -11,12 +11,10 @@ import {
 	SelectGroup,
 	SelectTrigger,
 	SelectValue,
-} from "@/components/ui/select";
+} from "../../components/ui/select";
 import { motion } from "framer-motion";
-import { Icon } from "lucide-react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 
 const infos = [
 	{

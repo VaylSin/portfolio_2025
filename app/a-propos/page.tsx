@@ -9,18 +9,24 @@ import {
 	FaWordpress,
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+	Tabs,
+	TabsContent,
+	TabsList,
+	TabsTrigger,
+} from "../../components/ui/tabs";
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
 } from "@radix-ui/react-tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "../../components/ui/scroll-area";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
+import { Button } from "../../components/ui/button";
 
 const skills = {
 	title: "Ce que j'utilise",
@@ -293,6 +299,8 @@ const Resume = () => {
 										className="w-[300px] h-[300px]  rounded-full mx-auto xl:mx-0 border border-accent"
 										src="/assets/img/sylvain-butet-skdigit-portrait.jpg"
 										alt="Sylvain Butet - SKDigit - Développeur Full-Stack Ardèche "
+										width={300}
+										height={300}
 									/>
 								</motion.div>
 								<p className="max-w-[800px] text-white/60 mx-auto xl:mx-0">

@@ -8,37 +8,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { BsArrowUpRight } from "react-icons/bs";
 import {
-	Beer,
-	CodeIcon,
-	Component,
-	LucideIcon,
-	Waves,
-	Music,
-	CameraIcon,
-	DollarSign,
-	BrainIcon,
-	YoutubeIcon,
-	Computer,
-} from "lucide-react";
-import {
 	Tooltip,
 	TooltipContent,
-	TooltipArrow,
 	TooltipTrigger,
 	TooltipProvider,
 } from "@radix-ui/react-tooltip";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
+import WorkSliderBtns from "../../components/WorkSliderBtns";
+import { Swiper as SwiperType } from "swiper";
 
 const projects = [
-	// {
-	// 	num: "01",
-	// 	category: "Développement NextJS",
-	// 	Logo: CodeIcon,
-	// 	title: "SkDigit",
-	// 	description: "Fondateur de SKDigit, agence de développement web",
-	// 	url: "https://skdigit.com",
-	// 	stack: ["NextJS", "TailwindCSS", "Firebase", "Framer Motion"],
-	// },
 	{
 		num: "01",
 		category: "Développement Wordpress",
@@ -127,7 +105,7 @@ const projects = [
 const Work = () => {
 	const [project, setProject] = useState(projects[0]);
 
-	const handleSlideChange = (swiper: any) => {
+	const handleSlideChange = (swiper: SwiperType) => {
 		const currentIndex = swiper.activeIndex;
 		setProject(projects[currentIndex]);
 	};
