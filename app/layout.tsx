@@ -13,18 +13,19 @@ const Raleway = RalewayFont({
 	weight: ["300", "400", "500", "600", "700", "800"],
 	variable: "--font-RalewayFont",
 });
+
 interface RootLayoutProps {
 	children: ReactNode;
 }
+
 export default function RootLayout({ children }: RootLayoutProps) {
 	const [robots, setRobots] = useState("index, follow");
 
 	useEffect(() => {
-		if (
-			typeof window !== "undefined" &&
-			window.location.hostname !== "skdigit.com"
-		) {
-			setRobots("noindex, nofollow");
+		if (typeof window !== "undefined") {
+			if (window.location.hostname !== "skdigit.com") {
+				setRobots("noindex, nofollow");
+			}
 		}
 	}, []);
 
@@ -91,11 +92,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
 					strategy="afterInteractive"
 					dangerouslySetInnerHTML={{
 						__html: `
-							window.dataLayer = window.dataLayer || [];
-							function gtag(){dataLayer.push(arguments);}
-							gtag('js', new Date());
-							gtag('config', 'G-77RFQ986CT');
-            			`,
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-77RFQ986CT');
+            `,
 					}}
 				/>
 			</body>
