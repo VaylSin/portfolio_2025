@@ -22,7 +22,7 @@ const services = [
 				</h3>
 				<p className="mb-8 lg:mb-4">
 					WordPress est pensé pour être utilisable sans compétences techniques.
-					L’interface d’administration est intuitive :
+					L&apos;interface d&apos;administration est intuitive :
 				</p>
 				<ul className="list-disc list-inside mb-4">
 					<li>
@@ -30,7 +30,7 @@ const services = [
 						clics.
 					</li>
 					<li>
-						L’éditeur de contenu (Gutenberg) permet de structurer ses pages
+						L&apos;éditeur de contenu (Gutenberg) permet de structurer ses pages
 						facilement avec des blocs.
 					</li>
 					<li>
@@ -48,7 +48,8 @@ const services = [
 				<p className="mb-8 lg:mb-4">
 					WordPress est parfois perçu comme une plateforme vulnérable, mais en
 					réalité, sa popularité en fait une cible privilégiée. Un site bien
-					maintenu et sécurisé n’a pas plus de risques qu’un autre CMS.
+					maintenu et sécurisé n&apos;a pas plus de risques qu&apos;un autre
+					CMS.
 				</p>
 				<ul className="list-disc list-inside mb-4">
 					<li>Mises à jour régulières du cœur, des thèmes et des plugins.</li>
@@ -64,7 +65,7 @@ const services = [
 					</li>
 				</ul>
 				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
-					Un écosystème gigantesque qui assure l’évolutivité
+					Un écosystème gigantesque qui assure l&apos;évolutivité
 				</h3>
 				<ul className="list-disc list-inside mb-4">
 					<li>
@@ -83,7 +84,7 @@ const services = [
 		num: "02",
 		title: "Applications Web",
 		description:
-			"Je conçois des applications web modernes avec React et Symfony. Que vous ayez besoin d’une solution sur mesure ou d’une optimisation de votre application existante, je vous aide à allier efficacité, scalabilité et expérience utilisateur fluide.",
+			"Je conçois des applications web modernes avec React et Symfony. Que vous ayez besoin d&apos;une solution sur mesure ou d&apos;une optimisation de votre application existante, je vous aide à allier efficacité, scalabilité et expérience utilisateur fluide.",
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
@@ -134,14 +135,14 @@ const services = [
 				<p className="mb-8 lg:mb-4">
 					Une landing page bien conçue joue un rôle fondamental dans le parcours
 					utilisateur en ligne. Elle sert de point de contact direct entre votre
-					audience et votre offre. L’objectif principal est de convertir un
-					visiteur en client ou de l’inciter à entreprendre une action
+					audience et votre offre. L&apos;objectif principal est de convertir un
+					visiteur en client ou de l&apos;inciter à entreprendre une action
 					spécifique. Pour cela, il est crucial de répondre rapidement à ses
 					attentes tout en étant clair et direct. Une landing page réussie
 					repose sur des éléments essentiels : un titre accrocheur, des appels à
-					l’action visibles, un design épuré, et un contenu focalisé qui élimine
-					toute distraction. Plus elle est simple et bien ciblée, plus elle
-					maximisera les taux de conversion.
+					l&apos;action visibles, un design épuré, et un contenu focalisé qui
+					élimine toute distraction. Plus elle est simple et bien ciblée, plus
+					elle maximisera les taux de conversion.
 				</p>
 				<p className="mb-8 lg:mb-4">
 					En intégrant des éléments de preuve sociale (témoignages, avis
@@ -177,7 +178,7 @@ const services = [
 					</li>
 					<li>
 						<strong>Mesurable et analysable</strong> : Permet de suivre
-						précisément les performances de vos campagnes et d’ajuster en
+						précisément les performances de vos campagnes et d&apos;ajuster en
 						fonction des résultats.
 					</li>
 					<li>
@@ -192,7 +193,7 @@ const services = [
 					<li>
 						<strong>Renforcement de la crédibilité</strong> : Témoignages,
 						garanties et preuves sociales augmentent la confiance de
-						l’utilisateur.
+						l&apos;utilisateur.
 					</li>
 				</ul>
 			</section>
@@ -202,29 +203,29 @@ const services = [
 		num: "04",
 		title: "Optimisations Référencement",
 		description:
-			"Votre site est optimisé pour un meilleur référencement naturel (SEO). De l’audit technique à l’amélioration du contenu et des performances, je mets en place des stratégies efficaces pour booster votre visibilité et attirer plus de visiteurs qualifiés.",
+			"Votre site est optimisé pour un meilleur référencement naturel (SEO). De l&apos;audit technique à l&apos;amélioration du contenu et des performances, je mets en place des stratégies efficaces pour booster votre visibilité et attirer plus de visiteurs qualifiés.",
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
 				<h2 className="text-2xl lg:text-3xl font-bold mb-8 text-accent">
-					SEO : L’Art d’Être Visible sur Google
+					SEO : L&apos;Art d&apos;Être Visible sur Google
 				</h2>
 				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Pourquoi le SEO est essentiel ?
 				</h3>
 				<p className="mb-8 lg:mb-4">
-					Avoir un site web, c’est bien. Mais s’il n’apparaît pas dans les
-					premiers résultats de Google, il risque de ne jamais être vu.
-					Aujourd’hui, 93% des expériences en ligne commencent par une recherche
-					et 75% des internautes ne vont jamais au-delà de la première page. Un
-					bon SEO permet d’attirer des visiteurs qualifiés et d’augmenter la
-					visibilité sans dépendre de la publicité payante.
+					Avoir un site web, c&apos;est bien. Mais s&apos;il n&apos;apparaît pas
+					dans les premiers résultats de Google, il risque de ne jamais être vu.
+					Aujourd&apos;hui, 93% des expériences en ligne commencent par une
+					recherche et 75% des internautes ne vont jamais au-delà de la première
+					page. Un bon SEO permet d&apos;attirer des visiteurs qualifiés et
+					d&apos;augmenter la visibilité sans dépendre de la publicité payante.
 				</p>
 				<h3 className="text-xl lg:text-2xl font-semibold mb-3">
 					Les 3 Piliers du Référencement
 				</h3>
 				<h4 className="text-xl font-semibold mb-2">
-					L’aspect technique : Un site rapide et bien structuré
+					L&apos;aspect technique : Un site rapide et bien structuré
 				</h4>
 				<ul className="list-disc list-inside mb-4">
 					<li>
@@ -252,12 +253,12 @@ const services = [
 				</h4>
 				<ul className="list-disc list-inside mb-4">
 					<li>
-						Les backlinks (liens entrants) : Plus un site est cité par d’autres
-						sites de qualité, plus il est bien classé.
+						Les backlinks (liens entrants) : Plus un site est cité par
+						d&apos;autres sites de qualité, plus il est bien classé.
 					</li>
 					<li>
-						L’UX (expérience utilisateur) : Google favorise les sites où les
-						visiteurs restent longtemps et interagissent.
+						L&apos;UX (expérience utilisateur) : Google favorise les sites où
+						les visiteurs restent longtemps et interagissent.
 					</li>
 				</ul>
 				<h3 className="text-xl lg:text-2xl font-semibold mb-3">

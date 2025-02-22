@@ -10,7 +10,8 @@ const stairAnimation = {
 	//     ease: "easeInOut",
 	// },
 };
-const reverseIndex = (index) => {
+
+const reverseIndex = (index: number) => {
 	const totalSteps = 8;
 	return totalSteps - index - 1;
 };

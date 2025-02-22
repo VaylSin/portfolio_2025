@@ -80,7 +80,7 @@ const Contact = () => {
 							<h3 className="text-4xl text-accent">Travaillons ensemble</h3>
 							<p className="text-white/60">
 								Vous avez un projet en tête et vous souhaitez en discuter ?
-								N'hésitez pas à me contacter.
+								N&apos;hésitez pas à me contacter.
 							</p>
 							<div className="grid grid-col-1 md:grid-cols-2 gap-6">
 								<Input

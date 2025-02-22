@@ -20,6 +20,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const skills = {
 	title: "Ce que j'utilise",
@@ -41,13 +42,13 @@ const about = {
 	title: "Qui je suis ?",
 	description: (
 		<>
-			Suite à une reconversion professionnelle en 2015, j’ai eu l’opportunité
-			d’acquérir plus de 7 ans d’expérience en agence, où j’ai pu développer des
-			compétences solides en création de sites vitrines et en développement
-			d’applications web.
+			Suite à une reconversion professionnelle en 2015, j&apos;ai eu
+			l&apos;opportunité d&apos;acquérir plus de 7 ans d&apos;expérience en
+			agence, où j&apos;ai pu développer des compétences solides en création de
+			sites vitrines et en développement d&apos;applications web.
 			<br />
 			<br />
-			Ce qui me passionne, c’est de répondre aux besoins uniques de chaque
+			Ce qui me passionne, c&apos;est de répondre aux besoins uniques de chaque
 			client, en concevant des solutions sur-mesure, performantes et
 			accessibles.
 			<br />
@@ -288,7 +289,7 @@ const Resume = () => {
 									exit={{ opacity: 0, y: 0 }}
 									className="py-6"
 								>
-									<img
+									<Image
 										className="w-[300px] h-[300px]  rounded-full mx-auto xl:mx-0 border border-accent"
 										src="/assets/img/sylvain-butet-skdigit-portrait.jpg"
 										alt="Sylvain Butet - SKDigit - Développeur Full-Stack Ardèche "
