@@ -84,7 +84,6 @@ const Contact = () => {
 
 		setTimeout(() => {
 			if (formRef.current) {
-				console.log(formData);
 				formRef.current.submit();
 				formRef.current.reset();
 			}
