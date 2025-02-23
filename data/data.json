@@ -1,0 +1,197 @@
+{
+	"skills": {
+		"title": "Ce que j'utilise",
+		"description": "J'ai développé des compétences avec un large éventail de technologies et d'outils. Voici un aperçu des principales compétences que j'ai acquises au fil de mon expérience.",
+		"items": [
+			{ "name": "HTML5", "icon": "<FaHtml5 />" },
+			{ "name": "CSS3", "icon": "<FaCss3 />" },
+			{ "name": "JavaScript", "icon": "<FaJs />" },
+			{ "name": "React", "icon": "<FaReact />" },
+			{ "name": "Symfony", "icon": "<FaSymfony />" },
+			{ "name": "Wordpress", "icon": "<FaWordpress />" },
+			{ "name": "Tailwindcss", "icon": "<SiTailwindcss />" },
+			{ "name": "Next.js", "icon": "<SiNextdotjs />" }
+		]
+	},
+	"about": {
+		"title": "Qui je suis ?",
+		"description": "<>Suite à une reconversion professionnelle en 2015, j&apos;ai eu l&apos;opportunité d&apos;acquérir plus de 7 ans d&apos;expérience en agence, où j&apos;ai pu développer des compétences solides en création de sites vitrines et en développement d&apos;applications web.<br /><br />Ce qui me passionne, c&apos;est de répondre aux besoins uniques de chaque client, en concevant des solutions sur-mesure, performantes et accessibles.<br />Mon travail me permet de marier technologie et créativité, et j'aime autant m'attaquer à des projets de petite envergure qu'à des défis plus complexes.<br /><br />En dehors de mon métier, je nourris ma curiosité et mon énergie à travers mes passions : la batterie, le sport et la cuisine, qui me permettent de me ressourcer et de garder un équilibre entre vie professionnelle et personnelle.</>",
+		"info": [
+			{ "label": "Experience", "value": "10 ans" },
+			{ "label": "Freelance", "value": "Disponible" },
+			{ "label": "Langue", "value": "Français, Anglais" }
+		]
+	},
+	"experiences": {
+		"icon": "assets/resume/badge.svg",
+		"title": "Mon parcours",
+		"description": "J'ai travaillé sur une variété de projets, allant de petits sites web à de grandes applications web. J'ai acquis de l'expérience en collaborant avec des clients de secteurs divers, tels que l'e-commerce, l'éducation et la santé. Je suis à l'aise dans des environnements dynamiques et je sais m'adapter rapidement aux exigences changeantes.",
+		"items": [
+			{
+				"company": "SKDigit",
+				"position": "Développeur Full-Stack",
+				"duration": "Juin 2023 - Présent"
+			},
+			{
+				"company": "Agence Modulo",
+				"position": "Développeur WordPress / Front-End",
+				"duration": "Avril 2021 - Mai 2022"
+			},
+			{
+				"company": "Agence Eanet",
+				"position": "Développeur Front-End",
+				"duration": "Juin 2016 - Janvier 2021"
+			},
+			{
+				"company": "LWM",
+				"position": "Développeur Front-End",
+				"duration": "Décembre 2015 - Mai 2016"
+			},
+			{
+				"company": "Rentabiliweb",
+				"position": "Développeur Javascript",
+				"duration": "Juin 2015 - Septembre 2015"
+			},
+			{
+				"company": "Coopatittude Startup",
+				"position": "Alternant Développeur Web",
+				"duration": "Mai 2014 - Juin 2015"
+			}
+		]
+	},
+	"education": {
+		"icon": "assets/resume/graduation.svg",
+		"title": "Mon cursus",
+		"description": "I have a Bachelor's degree in Computer Science from the University of Paris. I also have a Master's degree in Web Development from the University of Lyon. I am constantly learning new technologies and improving my skills to stay up-to-date with the latest trends in web development.",
+		"items": [
+			{
+				"name": "Maitrise en Conception Web bac +4",
+				"school": "Institut IEF2I",
+				"duration": "2014 - 2015"
+			},
+			{
+				"name": "Cursus Web - POE",
+				"school": "Institut IEF2I",
+				"duration": "2014"
+			},
+			{
+				"name": "DSPP Infographiste Multimédia",
+				"school": "Institut CEFIAC",
+				"duration": "2013"
+			}
+		]
+	},
+	"services": [
+		{
+			"num": "01",
+			"title": "Sites Wordpress / WooCommerce",
+			"description": "Je propose mes services de développement WordPress et WooCommerce pour votre entreprise. Que ce soit pour créer un site web sur mesure ou optimiser votre boutique en ligne existante, je suis avec vous à chaque étape.",
+			"link": "/services/web-development",
+			"full_text": "<section className=\"container mx-auto p-6 bg-background\"><h2 className=\"text-2xl lg:text-3xl font-bold mb-8 text-accent \">WordPress & WooCommerce : Une solution accessible et puissante</h2><h3 className=\"text-xl lg:text-2xl font-semibold mb-3\">Un back-office conçu pour être simple et efficace</h3><p className=\"mb-8 lg:mb-4\">WordPress est pensé pour être utilisable sans compétences techniques. L&apos;interface d&apos;administration est intuitive :</p><ul className=\"list-disc list-inside mb-4\"><li>Ajouter une page, un article ou un produit se fait en quelques clics.</li><li>L&apos;éditeur de contenu (Gutenberg) permet de structurer ses pages facilement avec des blocs.</li><li>WooCommerce suit la même logique avec une gestion des commandes et des stocks simplifiée.</li><li>Même si un site devient complexe, il existe toujours une extension ou un plugin pour ajouter des fonctionnalités sans toucher au code.</li></ul><h3 className=\"text-xl lg:text-2xl font-semibold mb-3\">Sécurité : Une plateforme solide avec les bonnes pratiques</h3><p className=\"mb-8 lg:mb-4\">WordPress est parfois perçu comme une plateforme vulnérable, mais en réalité, sa popularité en fait une cible privilégiée. Un site bien maintenu et sécurisé n&apos;a pas plus de risques qu&apos;un autre CMS.</p><ul className=\"list-disc list-inside mb-4\"><li>Mises à jour régulières du cœur, des thèmes et des plugins.</li><li>Limiter les extensions inutiles pour réduire les failles potentielles.</li><li>Utiliser un plugin de sécurité comme Wordfence ou iThemes Security.</li><li>Avoir un hébergement sécurisé qui bloque les attaques courantes.</li></ul><h3 className=\"text-xl lg:text-2xl font-semibold mb-3\">Un écosystème gigantesque qui assure l&apos;évolutivité</h3><ul className=\"list-disc list-inside mb-4\"><li>Des millions de sites utilisent WordPress, assurant un large support communautaire.</li><li>Des milliers de thèmes et plugins gratuits et premium.</li><li>Un CMS qui évolue constamment avec de nouvelles fonctionnalités.</li></ul></section>"
+		},
+		{
+			"num": "02",
+			"title": "Applications Web",
+			"description": "Je conçois des applications web modernes avec React et Symfony. Que vous ayez besoin d&apos;une solution sur mesure ou d&apos;une optimisation de votre application existante, je vous aide à allier efficacité, scalabilité et expérience utilisateur fluide.",
+			"link": "/services/web-development",
+			"full_text": "<section className=\"container mx-auto p-6 bg-background\"><h2 className=\"text-2xl lg:text-3xl font-bold mb-8 text-accent\">React & Symfony : Une Alliance Moderne et Performante</h2><h3 className=\"text-xl lg:text-2xl font-semibold mb-3\">React : Dynamisme et Expérience Utilisateur</h3><p className=\"mb-8 lg:mb-4\">React permet de créer des interfaces interactives et ultra-fluides. Grâce au chargement asynchrone des éléments, la navigation est rapide et immersive, idéale pour les applications web modernes.</p><ul className=\"list-disc list-inside mb-4\"><li>Expérience utilisateur fluide et sans rechargement de page.</li><li>Performance optimisée pour les applications interactives.</li><li>Supporté par Meta et une large communauté.</li></ul><h3 className=\"text-xl lg:text-2xl font-semibold mb-3\">Symfony : Un Back-Office Sécurisé et Sur-Mesure</h3><p className=\"mb-8 lg:mb-4\">Symfony est un framework robuste, adapté aux projets nécessitant un back-office personnalisé et sécurisé. Il offre une flexibilité totale sans dépendance aux plugins tiers.</p><ul className=\"list-disc list-inside mb-4\"><li>Back-office sur mesure avec gestion avancée des permissions.</li><li>Sécurité renforcée contre les attaques web.</li><li>Évolutif et pérenne, utilisé par les grandes entreprises.</li></ul></section>"
+		},
+		{
+			"num": "03",
+			"title": "Landing Pages",
+			"description": "Je crée des landing pages pour convertir vos visiteurs en clients. Que ce soit pour un lancement de produit, une campagne marketing ou un événement, je conçois des pages sur mesure, performantes et engageantes.",
+			"link": "/services/web-development",
+			"full_text": "<section className=\"container mx-auto p-6 bg-background\"><h2 className=\"text-2xl lg:text-3xl font-bold mb-8 text-accent \">L'importance d'une Landing Page : Capturer l'attention et maximiser la conversion</h2><p className=\"mb-8 lg:mb-4\">Une landing page bien conçue joue un rôle fondamental dans le parcours utilisateur en ligne. Elle sert de point de contact direct entre votre audience et votre offre. L&apos;objectif principal est de convertir un visiteur en client ou de l&apos;inciter à entreprendre une action spécifique. Pour cela, il est crucial de répondre rapidement à ses attentes tout en étant clair et direct. Une landing page réussie repose sur des éléments essentiels : un titre accrocheur, des appels à l&apos;action visibles, un design épuré, et un contenu focalisé qui élimine toute distraction. Plus elle est simple et bien ciblée, plus elle maximisera les taux de conversion.</p><p className=\"mb-8 lg:mb-4\">En intégrant des éléments de preuve sociale (témoignages, avis clients), des garanties, et une promesse claire de valeur ajoutée, la landing page instaure également la confiance. Elle permet de répondre directement à une problématique de l'utilisateur, offrant une solution qui semble évidente. De plus, son optimisation SEO, en fonction des mots-clés liés à votre offre, va aussi améliorer sa visibilité sur les moteurs de recherche, augmentant ainsi ses chances d'attirer des prospects qualifiés.</p><p className=\"mb-8 lg:mb-4\">En somme, une landing page n'est pas juste une page d'atterrissage, mais un outil stratégique essentiel pour maximiser le retour sur investissement de vos campagnes marketing en ligne.</p><h3 className=\"text-xl lg:text-2xl font-semibold mb-3\">Avantages d'une Landing Page efficace :</h3><ul className=\"list-disc list-inside mb-4\"><li><strong>Conversion optimisée</strong> : Conçue pour inciter à une action précise, elle maximise les chances de conversion des visiteurs en leads ou clients.</li><li><strong>Clarté du message</strong> : Focalise l'attention sur une offre spécifique, évitant toute distraction.</li><li><strong>Facilité de navigation</strong> : Un design épuré et intuitif guide l'utilisateur vers l'objectif sans confusion.</li><li><strong>Mesurable et analysable</strong> : Permet de suivre précisément les performances de vos campagnes et d&apos;ajuster en fonction des résultats.</li><li><strong>Augmentation du ROI</strong> : Réduit les coûts de marketing en concentrant les efforts sur des actions à fort potentiel de retour.</li><li><strong>Optimisation SEO</strong> : Améliore la visibilité sur les moteurs de recherche et attire un trafic qualifié.</li><li><strong>Renforcement de la crédibilité</strong> : Témoignages, garanties et preuves sociales augmentent la confiance de l&apos;utilisateur.</li></ul></section>"
+		},
+		{
+			"num": "04",
+			"title": "Optimisations Référencement",
+			"description": "Votre site est optimisé pour un meilleur référencement naturel (SEO). De l&apos;audit technique à l&apos;amélioration du contenu et des performances, je mets en place des stratégies efficaces pour booster votre visibilité et attirer plus de visiteurs qualifiés.",
+			"link": "/services/web-development",
+			"full_text": "<section className=\"container mx-auto p-6 bg-background\"><h2 className=\"text-2xl lg:text-3xl font-bold mb-8 text-accent\">SEO : L&apos;Art d&apos;Être Visible sur Google</h2><h3 className=\"text-xl lg:text-2xl font-semibold mb-3\">Pourquoi le SEO est essentiel ?</h3><p className=\"mb-8 lg:mb-4\">Avoir un site web, c&apos;est bien. Mais s&apos;il n&apos;apparaît pas dans les premiers résultats de Google, il risque de ne jamais être vu. Aujourd&apos;hui, 93% des expériences en ligne commencent par une recherche et 75% des internautes ne vont jamais au-delà de la première page. Un bon SEO permet d&apos;attirer des visiteurs qualifiés et d&apos;augmenter la visibilité sans dépendre de la publicité payante.</p><h3 className=\"text-xl lg:text-2xl font-semibold mb-3\">Les 3 Piliers du Référencement</h3><h4 className=\"text-xl font-semibold mb-2\">L&apos;aspect technique : Un site rapide et bien structuré</h4><ul className=\"list-disc list-inside mb-4\"><li>Un temps de chargement rapide est crucial (Google pénalise les sites trop lents).</li><li>Le site doit être mobile-friendly (plus de 60% des recherches se font sur smartphone).</li></ul><h4 className=\"text-xl font-semibold mb-2\">Le contenu : Roi du SEO</h4><ul className=\"list-disc list-inside mb-4\"><li>Il faut rédiger des textes pertinents et engageants qui répondent aux questions des visiteurs.</li><li>Utiliser des mots-clés stratégiques tout en gardant un langage naturel.</li></ul><h4 className=\"text-xl font-semibold mb-2\">La popularité : Les liens font la différence</h4><ul className=\"list-disc list-inside mb-4\"><li>Les backlinks (liens entrants) : Plus un site est cité par d&apos;autres sites de qualité, plus il est bien classé.</li><li>L&apos;UX (expérience utilisateur) : Google favorise les sites où les visiteurs restent longtemps et interagissent.</li></ul><h3 className=\"text-xl lg:text-2xl font-semibold mb-3\">Comment optimiser son SEO efficacement ?</h3></section>"
+		}
+	],
+	"projects": [
+		{
+			"num": "01",
+			"category": "Développement Wordpress",
+			"thumb": "/assets/img/gulwen.png",
+			"title": "Gûlwen",
+			"description": "Blog d'une influenceuse en Ardèche",
+			"url": "https://gulwen.fr",
+			"stack": ["Wordpress", "ACF", "Timber Components", "Aos"]
+		},
+		{
+			"num": "02",
+			"category": "Développement Wordpress / WebDesign",
+			"thumb": "/assets/img/jonesy.png",
+			"title": "Jonesy Agency",
+			"description": "Studio d'enregistrement basé à Paris 11",
+			"url": "https://jonesyagency.com",
+			"stack": ["Wordpress", "ACF flexible", "Sass", "Aos"]
+		},
+		{
+			"num": "03",
+			"category": "Développement Wordpress / WebDesign",
+			"thumb": "/assets/img/lovecraft.jpg",
+			"title": "LeLovecraft",
+			"description": "Bar / Restaurant / Salle de concert basé à Nantes",
+			"url": "https://www.lelovecraft.com",
+			"stack": ["Wordpress", "Sass", "ACF", "Aos"]
+		},
+		{
+			"num": "04",
+			"category": "Blog Wordpress",
+			"thumb": "/assets/img/johanna.png",
+			"title": "Johanna De Rangot",
+			"description": "Site d'une styliste / couturière talentueuse basée à St-Brieuc",
+			"url": "https://www.johannaderangot.com/",
+			"stack": ["Wordpress", "ACF", "Sass"]
+		},
+		{
+			"num": "05",
+			"category": "Développement Front-End",
+			"thumb": "/assets/img/landing.png",
+			"title": "Landing Page",
+			"description": "Un exemple de Landing Page",
+			"url": "https://landing.skdigit.com",
+			"stack": ["Html5", "TailwindCSs", "Aos"]
+		},
+		{
+			"num": "06",
+			"category": "Developpement ReactJS",
+			"thumb": "/assets/img/crypto.jpg",
+			"title": "Crypto App",
+			"description": "Une petite application listant et détaillant les principales Cryptos du marché",
+			"url": "https://crypto.skdigit.com",
+			"stack": ["ReactJS", "TailwindCSS", "CoinGecko API"]
+		},
+		{
+			"num": "07",
+			"category": "Développement ReactJS",
+			"thumb": "/assets/img/quiz.png",
+			"title": "CultureQuiz",
+			"description": "Un petit quizz de culture générale",
+			"url": "https://culturequiz.skdigit.com",
+			"stack": ["ReactJS", "Css3"]
+		},
+		{
+			"num": "08",
+			"category": "Développement ReactJS",
+			"thumb": "/assets/img/youtube.jpg",
+			"title": "Youtube Clone",
+			"description": "Un clone de Youtube en ReactJS",
+			"url": "https://youtube.skdigit.com",
+			"stack": ["ReactJS", "Material UI", "Youtube API"]
+		},
+		{
+			"num": "09",
+			"category": "Développement Wordpress / WebDesign",
+			"thumb": "/assets/img/kosho.png",
+			"title": "KoshoBrewers",
+			"description": "Une micro-brasserie sur fond de thématique Coréenne",
+			"url": "https://www.koshobrewers.com",
+			"stack": ["Wordpress", "ACF", "Sass"]
+		}
+	]
+}
