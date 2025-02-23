@@ -123,7 +123,7 @@ const Work = () => {
 					<div className="flex flex-col xl:flex-row xl:gap-[30px]">
 						<div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
 							<div className="flex flex-col gap-[30px]">
-								<div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+								<div className="text-4xl lg:text-8xl leading-none font-extrabold text-transparent text-outline">
 									{project.num}
 								</div>
 								<h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration 500 capitalize">
@@ -133,7 +133,10 @@ const Work = () => {
 								<ul className="flex gap-4">
 									{project.stack.map((item, index) => {
 										return (
-											<li key={index} className="text-xl text-accent">
+											<li
+												key={index}
+												className="text-base md:text-xl text-accent"
+											>
 												{item}
 												{index !== project.stack.length - 1 && ","}
 											</li>
@@ -173,21 +176,22 @@ const Work = () => {
 							<Swiper
 								spaceBetween={50}
 								slidesPerView={1}
-								className="xl:h-[520px] mb-12"
+								className="xl:h-[520px] mb-4 lg:mb-12"
 								onSlideChange={handleSlideChange}
 							>
 								{projects.map((item, index) => {
 									return (
 										<SwiperSlide key={index} className="w-full">
-											<div className="h-[460px] relative group flex justify-center items-center bg-primary">
-												{/* <div className="absolute top-0 bottom-0 w-full h-full bg-black/40 z-10"></div> */}
+											<div className="h-[260px] lg:h-[460px] relative group flex justify-center items-center bg-primary">
 												<div>
-													<Image
-														src={item.thumb}
-														fill
-														className="object-contain"
-														alt={item.title}
-													/>
+													<Link href={item.url} target="_blank">
+														<Image
+															src={item.thumb}
+															fill
+															className="object-contain "
+															alt={item.title}
+														/>
+													</Link>
 												</div>
 											</div>
 										</SwiperSlide>
