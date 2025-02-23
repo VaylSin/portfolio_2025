@@ -36,6 +36,7 @@ const infos = [
 ];
 
 const Contact = () => {
+	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [formData, setFormData] = useState({
 		nom_complet: "",
 		phone: "",
@@ -75,6 +76,7 @@ const Contact = () => {
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		setIsSubmitting(true);
 
 		customBtn.fire({
 			title: "Message envoyé !",
@@ -94,6 +96,7 @@ const Contact = () => {
 				sujet_demande: "",
 				message: "",
 			});
+			setIsSubmitting(false);
 		}, 500);
 	};
 
@@ -184,8 +187,13 @@ const Contact = () => {
 								onChange={handleChange}
 								required
 							/>
-							<Button type="submit" size="md" className="max-w-40">
-								Envoyer
+							<Button
+								type="submit"
+								size="md"
+								className="max-w-40"
+								disabled={isSubmitting}
+							>
+								{isSubmitting ? "Envoi en cours..." : "Envoyer"}
 							</Button>
 						</form>
 					</div>
