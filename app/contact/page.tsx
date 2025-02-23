@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef } from "react"; // Ajoute useRef ici
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
@@ -35,6 +36,16 @@ const infos = [
 ];
 
 const Contact = () => {
+	const [formData, setFormData] = useState({
+		nom_complet: "",
+		phone: "",
+		email: "",
+		sujet_demande: "",
+		message: "",
+	});
+
+	const formRef = useRef<HTMLFormElement>(null);
+
 	const customBtn = Swal.mixin({
 		customClass: {
 			confirmButton:
@@ -42,19 +53,51 @@ const Contact = () => {
 		},
 		buttonsStyling: false,
 	});
+
+	const handleChange = (
+		e: React.ChangeEvent<
+			HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+		>
+	) => {
+		const { name, value } = e.target;
+		setFormData((prevData) => ({
+			...prevData,
+			[name]: value,
+		}));
+	};
+
+	const handleSelectChange = (value: string) => {
+		setFormData((prevData) => ({
+			...prevData,
+			sujet_demande: value,
+		}));
+	};
+
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		// e.preventDefault();
+		e.preventDefault();
 
 		customBtn.fire({
 			title: "Message envoyé !",
 			text: "Nous tâchons de vous répondre dans les plus brefs délais.",
 			icon: "success",
 		});
+
 		setTimeout(() => {
-			e.currentTarget.submit();
-			e.currentTarget.reset();
+			if (formRef.current) {
+				console.log(formData);
+				formRef.current.submit();
+				formRef.current.reset();
+			}
+			setFormData({
+				nom_complet: "",
+				phone: "",
+				email: "",
+				sujet_demande: "",
+				message: "",
+			});
 		}, 500);
 	};
+
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -68,9 +111,10 @@ const Contact = () => {
 				<div className="flex flex-col-reverse xl:flex-row gap-[30px]">
 					<div className="xl:w-[54%] order-2 xl:order-none">
 						<form
+							ref={formRef} // Ajoute cette ligne
 							name="contact_principal"
 							method="POST"
-							action="https://formspree.io/f/xeoezywy"
+							action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMID}`}
 							target="hidden_iframe"
 							className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
 							onSubmit={handleSubmit}
@@ -86,13 +130,17 @@ const Contact = () => {
 									placeholder="Nom + Prénom"
 									label="nom_complet"
 									name="nom_complet"
+									value={formData.nom_complet}
+									onChange={handleChange}
 									required
 								/>
 								<Input
 									type="text"
 									placeholder="Téléphone"
-									label="Phone"
+									label="phone"
 									name="phone"
+									value={formData.phone}
+									onChange={handleChange}
 									required
 								/>
 								<Input
@@ -100,10 +148,16 @@ const Contact = () => {
 									placeholder="Email"
 									label="email"
 									name="email"
+									value={formData.email}
+									onChange={handleChange}
 									required
 								/>
 							</div>
-							<Select name="sujet_demande">
+							<Select
+								name="sujet_demande"
+								value={formData.sujet_demande}
+								onValueChange={handleSelectChange}
+							>
 								<SelectTrigger className="w-full">
 									<SelectValue placeholder="Sujet de votre demande" />
 								</SelectTrigger>
@@ -125,8 +179,10 @@ const Contact = () => {
 							<Textarea
 								className="h-[200px]"
 								placeholder="Message"
-								label="Message"
-								name="Message"
+								label="message"
+								name="message"
+								value={formData.message}
+								onChange={handleChange}
 								required
 							/>
 							<Button type="submit" size="md" className="max-w-40">
@@ -155,4 +211,5 @@ const Contact = () => {
 		</motion.section>
 	);
 };
+
 export default Contact;
