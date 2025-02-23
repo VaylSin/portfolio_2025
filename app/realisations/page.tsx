@@ -185,7 +185,7 @@ const Work = () => {
 													<Image
 														src={item.thumb}
 														fill
-														className="object-cover"
+														className="object-contain"
 														alt={item.title}
 													/>
 												</div>
