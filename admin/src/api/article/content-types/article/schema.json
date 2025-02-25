@@ -27,6 +27,16 @@
       "relation": "manyToMany",
       "target": "api::categorie.categorie",
       "inversedBy": "articles"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
