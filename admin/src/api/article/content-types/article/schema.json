@@ -28,15 +28,21 @@
       "target": "api::categorie.categorie",
       "inversedBy": "articles"
     },
+    "slug": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
