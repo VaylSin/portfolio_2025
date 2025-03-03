@@ -3,6 +3,7 @@
 import React from "react";
 import ArticleTemplate from "../../../components/ArticleTemplate";
 import { Metadata } from "next";
+import Link from "next/link";
 
 // Type pour les données de l'article
 type Article = {
@@ -50,12 +51,9 @@ export async function generateStaticParams() {
 		);
 	}
 	// Générer les chemins (paths) pour chaque article
-	return articles.data.map((article: Article) =>
-		// console.log("Article :", article), // Inspecter l'article
-		({
-			slug: article.slug, // Utiliser le slug au lieu de l'ID
-		})
-	);
+	return articles.data.map((article: Article) => ({
+		slug: article.slug, // Utiliser le slug au lieu de l'ID
+	}));
 }
 
 // Générer les meta dynamiques
@@ -65,7 +63,6 @@ export async function generateMetadata({
 	params: { slug: string };
 }): Promise<Metadata> {
 	const { slug } = params;
-	console.log("Slug :", slug); // Inspecter le slug
 
 	// Récupérer l'article depuis l'API en fonction du slug
 	const res = await fetch(
@@ -106,26 +103,69 @@ export async function generateMetadata({
 }
 
 // Composant de la page
-const BlogPage: React.FC<{ params: { slug: string } }> = async ({ params }) => {
+const BlogPage = async ({ params }) => {
 	const { slug } = params;
 
 	// Récupérer l'article depuis l'API en fonction du slug
 	const res = await fetch(
-		`http://localhost:1337/api/articles?filters[slug][$eq]=${slug}&populate[0]=categories&populate[1]=image`
+		// `http://localhost:1337/api/articles?filters[slug][$eq]=${slug}&populate[0]=categories&populate[1]=image&sort=publishedAt:desc`
+		`http://localhost:1337/api/articles?populate=categories&populate=image`
 	);
 	const articles = await res.json();
-
-	console.log("Données de l'article :", articles); // Inspecter les données
 
 	if (!articles.data || articles.data.length === 0) {
 		return <div>Article non trouvé</div>;
 	}
+	const currentIndex = articles.data.findIndex(
+		(article: Article) => article.slug === slug
+	);
+	if (currentIndex === -1) {
+		return <div>Article non trouvé</div>;
+	}
 
-	const article = articles.data[0];
-
+	// const article = articles.data[0];
+	const article = articles.data[currentIndex];
+	const previousArticle =
+		currentIndex > 0 ? articles.data[currentIndex - 1] : null;
+	const nextArticle =
+		currentIndex < articles.data.length - 1
+			? articles.data[currentIndex + 1]
+			: null;
 	return (
 		<div>
 			<ArticleTemplate article={article} />
+			<div
+				className="max-w-4xl mx-auto p-5"
+				style={{
+					display: "flex",
+					justifyContent: "space-between",
+					marginTop: "2rem",
+				}}
+			>
+				{previousArticle ? (
+					<Link
+						href={`/blog/${previousArticle.slug}`}
+						className="text-accent"
+						title={previousArticle.title}
+					>
+						← Article précédent
+					</Link>
+				) : (
+					<span></span>
+				)}
+
+				{nextArticle ? (
+					<Link
+						href={`/blog/${nextArticle.slug}`}
+						className="text-accent"
+						title={nextArticle.title}
+					>
+						Article suivant →
+					</Link>
+				) : (
+					<span></span>
+				)}
+			</div>
 		</div>
 	);
 };
