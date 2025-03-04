@@ -4,38 +4,8 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-
-type Article = {
-	id: number;
-	title: string;
-	content: string;
-	slug: string;
-	categories?: {
-		id: number;
-		nom: string;
-		slug: string;
-	}[];
-	image?: {
-		formats: {
-			large: {
-				url: string;
-			};
-			small: {
-				url: string;
-			};
-			medium: {
-				url: string;
-			};
-			thumbnail: {
-				url: string;
-			};
-		};
-		url: string;
-	};
-	createdAt: string;
-	updatedAt: string;
-	publishedAt: string | null;
-};
+import Image from "next/image";
+import { Article } from "../types";
 
 type ArticleTemplateProps = {
 	article: Article;
@@ -83,10 +53,14 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({ article }) => {
 	return (
 		<div className="max-w-4xl mx-auto p-5">
 			{imageUrl && (
-				<img
-					src={imageUrl}
+				<Image
 					alt={article.title}
+					src={imageUrl}
+					title={article.title}
 					className="w-full h-auto rounded-lg"
+					loading="lazy"
+					width={1200}
+					height={630}
 				/>
 			)}
 

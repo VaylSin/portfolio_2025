@@ -1,32 +1,27 @@
 import Link from "next/link";
-import React from "react";
-
-interface Article {
-	id: number;
-	slug: string;
-	title: string;
-	content: string;
-	image: {
-		formats: {
-			small: {
-				url: string;
-			};
-		};
-		url: string;
-		alt: string;
-	};
-}
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { Article } from "../../types";
 
 const Card = ({ article }: { article: Article }) => {
-	const thumbnail = article.image.formats.small.url;
+	const [thumbnail, setThumbnail] = useState<string | null>(null);
+
+	useEffect(() => {
+		if (article.image) {
+			setThumbnail(article.image.formats.small.url);
+		}
+	}, [article.image?.formats.small.url]);
+
 	return (
 		<div className="bg-primary border border-accent rounded-lg shadow-md overflow-hidden">
 			{article.image && (
-				<img
+				<Image
 					src={thumbnail || article.image.url}
-					alt={article.title}
+					alt={article.image.alt || article.title} // Utilisez article.title comme valeur de secours
 					className="w-full h-48 object-cover"
 					loading="lazy"
+					width={640}
+					height={360}
 				/>
 			)}
 			{/* Contenu de la carte */}
@@ -45,4 +40,5 @@ const Card = ({ article }: { article: Article }) => {
 		</div>
 	);
 };
+
 export default Card;

@@ -4,22 +4,7 @@ import axios from "axios";
 import Card from "../../components/ui/Card";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-interface Article {
-	id: number;
-	slug: string;
-	title: string;
-	content: string;
-	image: {
-		formats: {
-			small: {
-				url: string;
-			};
-		};
-		url: string;
-		alt: string;
-	};
-}
+import { Article } from "../../types";
 
 export default function Blog() {
 	const [data, setData] = useState<Article[] | null>(null);
@@ -30,7 +15,7 @@ export default function Blog() {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(
-					process.env.CANONICAL_API_URL + "/articles?populate=*" // Remplacez `articles` par le nom de votre modèle
+					"http://localhost:1337/api/articles?populate=*" // Remplacez `articles` par le nom de votre modèle
 				);
 				setData(response.data.data); // Assurez-vous que response.data.data est du type Article[]
 			} catch (err) {
@@ -43,8 +28,9 @@ export default function Blog() {
 		fetchData();
 	}, []);
 
-	if (loading) return <div>Loading...</div>;
-	if (error) return <div>Error: {error.message}</div>;
+	if (loading)
+		return <div className="container max-w-[1280px]">Chargement...</div>;
+	if (error) return <div>Erreur: {error.message}</div>;
 
 	return (
 		<div className="container max-w-[1280px] mx-auto px-4 py-8">

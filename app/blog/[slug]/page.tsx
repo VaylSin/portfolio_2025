@@ -4,71 +4,32 @@ import React from "react";
 import ArticleTemplate from "../../../components/ArticleTemplate";
 import { Metadata } from "next";
 import Link from "next/link";
-
-// Type pour les données de l'article
-type Article = {
-	id: number;
-	title: string;
-	content: string;
-	slug: string;
-	categories?: {
-		id: number;
-		nom: string;
-		slug: string;
-	}[];
-	image?: {
-		formats: {
-			large: {
-				url: string;
-			};
-			small: {
-				url: string;
-			};
-			medium: {
-				url: string;
-			};
-			thumbnail: {
-				url: string;
-			};
-		};
-		url: string;
-	};
-	createdAt: string;
-	updatedAt: string;
-	publishedAt: string | null;
-};
+import { Article } from "../../../types";
 
 // Générer les chemins statiques
 export async function generateStaticParams() {
-	// Récupérer la liste des articles depuis l'API
-	const res = await fetch(
+	const articles = await fetch(
 		`${process.env.CANONICAL_API_URL}api/articles?populate=categories&populate=image`
-	);
-	const articles = await res.json();
+	).then((res) => res.json());
+	// const articles = await res.json();
 	if (!articles.data || !Array.isArray(articles.data)) {
 		throw new Error(
 			"La réponse de l'API ne contient pas un tableau de données"
 		);
 	}
-	// Générer les chemins (paths) pour chaque article
 	return articles.data.map((article: Article) => ({
-		slug: article.slug, // Utiliser le slug au lieu de l'ID
+		slug: article.slug,
 	}));
 }
 
 // Générer les meta dynamiques
-export async function generateMetadata({
-	params,
-}: {
-	params: { slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata({ params }): Promise<Metadata> {
 	const { slug } = params;
 
-	// Récupérer l'article depuis l'API en fonction du slug
-	const res = await fetch(
+	// Récupérer l'article depuis l'API
+	const articles = await fetch(
 		`${process.env.CANONICAL_API_URL}api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
-	);
-	const articles = await res.json();
+	).then((res) => res.json());
 
 	if (!articles.data || articles.data.length === 0) {
 		return {
@@ -78,7 +39,7 @@ export async function generateMetadata({
 	}
 
 	const article = articles.data[0];
-	const metaDescription = article.content.slice(0, 160).replace(/<[^>]+>/g, ""); // Extraire les 160 premiers caractères
+	const metaDescription = article.content.slice(0, 160).replace(/<[^>]+>/g, "");
 	const imageUrl = article.image?.formats.large.url || article.image?.url;
 
 	return {
@@ -105,25 +66,23 @@ export async function generateMetadata({
 // Composant de la page
 const BlogPage = async ({ params }) => {
 	const { slug } = params;
-
-	// Récupérer l'article depuis l'API en fonction du slug
+	// Récupérer l'article depuis l'API
 	const res = await fetch(
-		// `http://localhost:1337/api/articles?filters[slug][$eq]=${slug}&populate[0]=categories&populate[1]=image&sort=publishedAt:desc`
 		`${process.env.CANONICAL_API_URL}api/articles?populate=categories&populate=image`
 	);
 	const articles = await res.json();
 
 	if (!articles.data || articles.data.length === 0) {
-		return <div>Article non trouvé</div>;
+		return <div className="max-w-4xl mx-auto p-5">Article non trouvé</div>;
 	}
+
 	const currentIndex = articles.data.findIndex(
 		(article: Article) => article.slug === slug
 	);
 	if (currentIndex === -1) {
-		return <div>Article non trouvé</div>;
+		return <div className="max-w-4xl mx-auto p-5">Article non trouvé</div>;
 	}
 
-	// const article = articles.data[0];
 	const article = articles.data[currentIndex];
 	const previousArticle =
 		currentIndex > 0 ? articles.data[currentIndex - 1] : null;
@@ -131,6 +90,7 @@ const BlogPage = async ({ params }) => {
 		currentIndex < articles.data.length - 1
 			? articles.data[currentIndex + 1]
 			: null;
+
 	return (
 		<div>
 			<ArticleTemplate article={article} />

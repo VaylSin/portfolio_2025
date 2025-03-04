@@ -23,11 +23,11 @@ const Home = () => {
 					>
 						<div className="text-center xl:text-left order-2 xl:order-none">
 							<span className="text-xl">Développeur Web Freelance</span>
-							<h1 className="h1 mb-6 leading-tight">
+							<h2 className="h1 mb-6 leading-tight">
 								Bienvenue chez
 								<br />
 								<span className="text-accent">SKDigit</span>
-							</h1>
+							</h2>
 							<p className="max-w-[500px] mb-9 text-white/80">
 								Basé dans la magnifique Sud-Ardèche, j’accompagne mes clients
 								dans la création de projets web sur-mesure, en alliant

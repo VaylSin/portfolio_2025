@@ -84,7 +84,7 @@ const services = [
 		num: "02",
 		title: "Applications Web",
 		description:
-			"Je conçois des applications web modernes avec React et Symfony. Que vous ayez besoin d&apos;une solution sur mesure ou d&apos;une optimisation de votre application existante, je vous aide à allier efficacité, scalabilité et expérience utilisateur fluide.",
+			"Je conçois des applications web modernes avec React et Symfony. Que vous ayez besoin d'une solution sur mesure ou d'une optimisation de votre application existante, je vous aide à allier efficacité, scalabilité et expérience utilisateur fluide.",
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
@@ -203,7 +203,7 @@ const services = [
 		num: "04",
 		title: "Optimisations Référencement",
 		description:
-			"Votre site est optimisé pour un meilleur référencement naturel (SEO). De l&apos;audit technique à l&apos;amélioration du contenu et des performances, je mets en place des stratégies efficaces pour booster votre visibilité et attirer plus de visiteurs qualifiés.",
+			"Votre site est optimisé pour un meilleur référencement naturel (SEO). De l'audit technique à l'amélioration du contenu et des performances, je mets en place des stratégies efficaces pour booster votre visibilité et attirer plus de visiteurs qualifiés.",
 		link: "/services/web-development",
 		full_text: (
 			<section className="container mx-auto p-6 bg-background">
