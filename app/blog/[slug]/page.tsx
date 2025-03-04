@@ -42,7 +42,7 @@ type Article = {
 export async function generateStaticParams() {
 	// Récupérer la liste des articles depuis l'API
 	const res = await fetch(
-		"http://localhost:1337/api/articles?populate=categories&populate=image"
+		`${process.env.CANONICAL_API_URL}api/articles?populate=categories&populate=image`
 	);
 	const articles = await res.json();
 	if (!articles.data || !Array.isArray(articles.data)) {
@@ -66,7 +66,7 @@ export async function generateMetadata({
 
 	// Récupérer l'article depuis l'API en fonction du slug
 	const res = await fetch(
-		`http://localhost:1337/api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
+		`${process.env.CANONICAL_API_URL}api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
 	);
 	const articles = await res.json();
 
@@ -109,7 +109,7 @@ const BlogPage = async ({ params }) => {
 	// Récupérer l'article depuis l'API en fonction du slug
 	const res = await fetch(
 		// `http://localhost:1337/api/articles?filters[slug][$eq]=${slug}&populate[0]=categories&populate[1]=image&sort=publishedAt:desc`
-		`http://localhost:1337/api/articles?populate=categories&populate=image`
+		`${process.env.CANONICAL_API_URL}api/articles?populate=categories&populate=image`
 	);
 	const articles = await res.json();
 

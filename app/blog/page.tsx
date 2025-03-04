@@ -30,7 +30,7 @@ export default function Blog() {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(
-					"http://localhost:1337/api/articles?populate=*"
+					process.env.CANONICAL_API_URL + "/articles?populate=*" // Remplacez `articles` par le nom de votre modèle
 				);
 				setData(response.data.data); // Assurez-vous que response.data.data est du type Article[]
 			} catch (err) {

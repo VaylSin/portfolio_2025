@@ -77,15 +77,11 @@ const StyledContent = styled.div`
 `;
 
 const ArticleTemplate: React.FC<ArticleTemplateProps> = ({ article }) => {
-	// Vérifier si l'image existe et a une URL
 	const imageUrl = article.image?.formats.large.url || article.image?.url;
-
-	// Vérifier si `categories` existe et est un tableau
 	const categories = article.categories || [];
 
 	return (
 		<div className="max-w-4xl mx-auto p-5">
-			{/* Thumbnail (si disponible) */}
 			{imageUrl && (
 				<img
 					src={imageUrl}
@@ -94,18 +90,13 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({ article }) => {
 				/>
 			)}
 
-			{/* Titre */}
 			<h1 className="my-8 text-4xl font-bold text-accent">{article.title}</h1>
-
-			{/* Catégorie */}
 			{categories.length > 0 && (
 				<div className="my-5 text-accent">
 					<strong>Catégorie :</strong>{" "}
 					{categories.map((cat) => cat.nom).join(", ")}
 				</div>
 			)}
-
-			{/* Date de publication */}
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
@@ -117,8 +108,6 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({ article }) => {
 					</small>
 				)}
 			</motion.div>
-
-			{/* Contenu */}
 			<StyledContent>
 				<ReactMarkdown>{article.content}</ReactMarkdown>
 			</StyledContent>
