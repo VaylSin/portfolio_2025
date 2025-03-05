@@ -9,14 +9,15 @@ import { Article } from "../../../types";
 // Générer les chemins statiques
 export async function generateStaticParams() {
 	const articles = await fetch(
-		`${process.env.CANONICAL_API_URL}api/articles?populate=categories&populate=image`
+		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}api/articles?populate=categories&populate=image`
 	).then((res) => res.json());
-	// const articles = await res.json();
+
 	if (!articles.data || !Array.isArray(articles.data)) {
 		throw new Error(
 			"La réponse de l'API ne contient pas un tableau de données"
 		);
 	}
+
 	return articles.data.map((article: Article) => ({
 		slug: article.slug,
 	}));
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 
 	// Récupérer l'article depuis l'API
 	const articles = await fetch(
-		`${process.env.CANONICAL_API_URL}api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
+		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
 	).then((res) => res.json());
 
 	if (!articles.data || articles.data.length === 0) {
@@ -66,11 +67,11 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 // Composant de la page
 const BlogPage = async ({ params }) => {
 	const { slug } = params;
+
 	// Récupérer l'article depuis l'API
-	const res = await fetch(
-		`${process.env.CANONICAL_API_URL}api/articles?populate=categories&populate=image`
-	);
-	const articles = await res.json();
+	const articles = await fetch(
+		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}api/articles?populate=categories&populate=image`
+	).then((res) => res.json());
 
 	if (!articles.data || articles.data.length === 0) {
 		return <div className="max-w-4xl mx-auto p-5">Article non trouvé</div>;
