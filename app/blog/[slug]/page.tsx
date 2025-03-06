@@ -9,10 +9,7 @@ import axios from "axios";
 
 // Générer les chemins statiques
 export async function generateStaticParams() {
-	const url = new URL(
-		"api/articles?populate=categories&populate=image",
-		process.env.NEXT_PUBLIC_CANONICAL_API_URL
-	);
+	const url = `${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/articles?populate=categories&populate=image`;
 	const articles = await axios
 		.get(url.toString(), {
 			method: "GET",
@@ -35,12 +32,12 @@ export async function generateStaticParams() {
 
 // Générer les meta dynamiques
 export async function generateMetadata({ params }): Promise<Metadata> {
-	const { slug } = params;
+	const { slug } = await params;
 
 	// Récupérer l'article depuis l'API
 	const article = await axios
 		.get(
-			`/api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
+			`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
 		)
 		.then((res) => res.data);
 	if (!article.data || article.data.length === 0) {
@@ -80,11 +77,11 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 
 // Composant de la page
 const BlogPage = async ({ params }) => {
-	const { slug } = params;
+	const { slug } = await params;
 
 	// Récupérer l'article depuis l'API
 	const articles = await fetch(
-		`/api/articles?populate=categories&populate=image`
+		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/articles?populate=categories&populate=image`
 	).then((res) => res.json());
 
 	if (!articles.data || articles.data.length === 0) {

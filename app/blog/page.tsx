@@ -13,7 +13,9 @@ export default function Blog() {
 
 	useEffect(() => {
 		axios
-			.get(`api/articles?populate=*`)
+			.get(
+				`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/articles?populate=*`
+			)
 			.then((response) => {
 				setData(response.data.data);
 			})
@@ -34,7 +36,7 @@ export default function Blog() {
 
 	return (
 		<div className="container max-w-[1280px] mx-auto px-4 py-8">
-			<h1 className="text-3xl font-bold mb-8">Blog</h1>
+			<h1 className="text-3xl font-bold mb-8">Le blog</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{data?.map((article: Article, index: number) => (
 					<motion.div

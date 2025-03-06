@@ -34,7 +34,7 @@ const StyledContent = styled.div`
 		margin-bottom: 1rem;
 		font-size: 2rem;
 		font-weight: bold;
-		color: #2d3748;
+		color: #ff6f61;
 	}
 
 	h3 {
