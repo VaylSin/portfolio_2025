@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	darkMode: ["class"],
+	darkMode: ["class"], // Activation du dark mode via une classe
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -22,10 +22,17 @@ export default {
 				primary: "var(--font-RalewayFont)",
 			},
 			colors: {
-				primary: "#253137",
+				primary: "#253137", // Couleur principale en mode clair
 				accent: {
-					DEFAULT: "#ff6f61",
-					hover: "#FF8B82",
+					DEFAULT: "#ff6f61", // Couleur d'accent en mode clair
+					hover: "#FF8B82", // Couleur d'accent au survol en mode clair
+				},
+				dark: {
+					primary: "#A8DADC", // Couleur principale en mode sombre
+					accent: {
+						DEFAULT: "#2C3E50", // Couleur d'accent en mode sombre
+						hover: "#34495E", // Couleur d'accent au survol en mode sombre
+					},
 				},
 			},
 			height: {
