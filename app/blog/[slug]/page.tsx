@@ -29,7 +29,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 
 	// Récupérer l'article depuis l'API
 	const articles = await fetch(
-		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
+		`/api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
 	).then((res) => res.json());
 
 	if (!articles.data || articles.data.length === 0) {
@@ -70,7 +70,7 @@ const BlogPage = async ({ params }) => {
 
 	// Récupérer l'article depuis l'API
 	const articles = await fetch(
-		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}api/articles?populate=categories&populate=image`
+		`api/articles?populate=categories&populate=image`
 	).then((res) => res.json());
 
 	if (!articles.data || articles.data.length === 0) {

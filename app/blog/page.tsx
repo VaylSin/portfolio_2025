@@ -15,7 +15,7 @@ export default function Blog() {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(
-					`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}api/articles?populate=*` // Remplacez `articles` par le nom de votre modèle
+					`/api/articles?populate=*` // Remplacez `articles` par le nom de votre modèle
 				);
 				setData(response.data.data); // Assurez-vous que response.data.data est du type Article[]
 			} catch (err) {
@@ -30,7 +30,10 @@ export default function Blog() {
 
 	if (loading)
 		return <div className="container max-w-[1280px]">Chargement...</div>;
-	if (error) return <div>Erreur: {error.message}</div>;
+	if (error)
+		return (
+			<div className="container max-w-[1280px]">Erreur: {error.message}</div>
+		);
 
 	return (
 		<div className="container max-w-[1280px] mx-auto px-4 py-8">
