@@ -10,7 +10,7 @@ const Card = ({ article }: { article: Article }) => {
 		if (article.image) {
 			setThumbnail(article.image.formats.small.url);
 		}
-	}, [article.image?.formats.small.url]);
+	}, [article.image]);
 
 	return (
 		<div className="bg-primary border border-accent rounded-lg shadow-md overflow-hidden">

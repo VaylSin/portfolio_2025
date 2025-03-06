@@ -8,9 +8,16 @@ import { Article } from "../../../types";
 
 // Générer les chemins statiques
 export async function generateStaticParams() {
-	const articles = await fetch(
-		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}api/articles?populate=categories&populate=image`
-	).then((res) => res.json());
+	const url = new URL(
+		"api/articles?populate=categories&populate=image",
+		process.env.NEXT_PUBLIC_CANONICAL_API_URL
+	);
+	const articles = await fetch(url.toString(), {
+		method: "GET",
+		headers: {
+			"Content-Type": "application/json",
+		},
+	}).then((res) => res.json());
 
 	if (!articles.data || !Array.isArray(articles.data)) {
 		throw new Error(
@@ -29,9 +36,9 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 
 	// Récupérer l'article depuis l'API
 	const articles = await fetch(
-		`/api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
+		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/articles?filters[slug][$eq]=${slug}}&populate=categories&populate=image`
 	).then((res) => res.json());
-
+	console.log("articles", articles);
 	if (!articles.data || articles.data.length === 0) {
 		return {
 			title: "Article non trouvé",
@@ -70,7 +77,7 @@ const BlogPage = async ({ params }) => {
 
 	// Récupérer l'article depuis l'API
 	const articles = await fetch(
-		`api/articles?populate=categories&populate=image`
+		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/articles?populate=categories&populate=image`
 	).then((res) => res.json());
 
 	if (!articles.data || articles.data.length === 0) {
