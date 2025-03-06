@@ -5,6 +5,7 @@ import ArticleTemplate from "../../../components/ArticleTemplate";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Article } from "../../../types";
+import axios from "axios";
 
 // Générer les chemins statiques
 export async function generateStaticParams() {
@@ -12,12 +13,14 @@ export async function generateStaticParams() {
 		"api/articles?populate=categories&populate=image",
 		process.env.NEXT_PUBLIC_CANONICAL_API_URL
 	);
-	const articles = await fetch(url.toString(), {
-		method: "GET",
-		headers: {
-			"Content-Type": "application/json",
-		},
-	}).then((res) => res.json());
+	const articles = await axios
+		.get(url.toString(), {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+		.then((res) => res.data);
 
 	if (!articles.data || !Array.isArray(articles.data)) {
 		throw new Error(
@@ -35,26 +38,30 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 	const { slug } = params;
 
 	// Récupérer l'article depuis l'API
-	const articles = await fetch(
-		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/articles?filters[slug][$eq]=${slug}}&populate=categories&populate=image`
-	).then((res) => res.json());
-	console.log("articles", articles);
-	if (!articles.data || articles.data.length === 0) {
+	const article = await axios
+		.get(
+			`/api/articles?filters[slug][$eq]=${slug}&populate=categories&populate=image`
+		)
+		.then((res) => res.data);
+	if (!article.data || article.data.length === 0) {
 		return {
 			title: "Article non trouvé",
 			description: "Cet article n'existe pas.",
 		};
 	}
 
-	const article = articles.data[0];
-	const metaDescription = article.content.slice(0, 160).replace(/<[^>]+>/g, "");
-	const imageUrl = article.image?.formats.large.url || article.image?.url;
+	const articleData = article.data[0];
+	const metaDescription = articleData.content
+		.slice(0, 160)
+		.replace(/<[^>]+>/g, "");
+	const imageUrl =
+		articleData.image?.formats.large.url || articleData.image?.url;
 
 	return {
-		title: article.title,
+		title: articleData.title,
 		description: metaDescription,
 		openGraph: {
-			title: article.title,
+			title: articleData.title,
 			description: metaDescription,
 			type: "article",
 			images: imageUrl
@@ -63,7 +70,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 							url: imageUrl,
 							width: 1200,
 							height: 630,
-							alt: article.title,
+							alt: articleData.title,
 						},
 				  ]
 				: [],
@@ -77,7 +84,7 @@ const BlogPage = async ({ params }) => {
 
 	// Récupérer l'article depuis l'API
 	const articles = await fetch(
-		`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/articles?populate=categories&populate=image`
+		`/api/articles?populate=categories&populate=image`
 	).then((res) => res.json());
 
 	if (!articles.data || articles.data.length === 0) {

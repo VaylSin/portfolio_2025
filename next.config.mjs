@@ -13,15 +13,15 @@ const nextConfig = {
 	 * Rewrites function to redirect API requests to the backend Strapi server.
 	 * @returns {Array} An array of rewrite rules.
 	 */
-	// async rewrites() {
-	// 	return [
-	// 		{
-	// 			// Redirect all requests from /api to the Strapi backend
-	// 			source: "/api/:path*",
-	// 			destination: `${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/:path*`,
-	// 		},
-	// 	];
-	// },
+	async rewrites() {
+		return [
+			{
+				// Redirect all requests from /api to the Strapi backend
+				source: "/api/:path*",
+				destination: `${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/:path*`,
+			},
+		];
+	},
 };
 
 export default nextConfig;
