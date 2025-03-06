@@ -15,7 +15,7 @@ export default function Blog() {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(
-					`/api/articles?populate=*` // Remplacez `articles` par le nom de votre modèle
+					`${process.env.NEXT_PUBLIC_CANONICAL_API_URL}/api/articles?populate=*` // Remplacez `articles` par le nom de votre modèle
 				);
 				setData(response.data.data); // Assurez-vous que response.data.data est du type Article[]
 			} catch (err) {
